@@ -15,7 +15,21 @@
         <meta name="last-modified" content="2025-10-02">
         <!-- Stylesheet -->
         <style>
-            
+            @font-face {font-family: Unifraktur Maguntia; src: url(/files/fonts/unifrakturmaguntia.ttf);}
+            body {background-image: url('/files/imgs/mapofworld.jpg'); background-repeat: repeat; background-size: 50vw 50vh;}
+            article {max-width: 900px; margin: auto;}
+            h1, p {background-color: antiquewhite; /* Keep the existing background color */
+            font-family: BookAntiqua; /* Use BookAntiqua for consistency as p was cursive */
+            padding: 0.5em; /* Increased padding to give space for the border image */
+            border: 10px solid transparent; /* A transparent border to hold the image */
+            border-image-source: url('/files/imgs/paperborder.jpg'); /* Your border image */
+            border-image-slice: 30; /* Adjust this value based on your image's thickness */
+            border-image-repeat: round; /* or 'stretch', 'repeat' */
+            border-image-outset: 0; /* Ensures the border image doesn't push content inwards */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+            h1 {font-size: 2.5em; font-family: 'Unifraktur Maguntia';}
+            p {font-size: 1.4em;  font-family: 'Unifraktur Maguntia'; letter-spacing: 3;}
         </style>
     </head>
 
@@ -27,12 +41,21 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>Ekphrastic Cartography</h1>
             </header>
 
             <!-- Main -->
             <main>
-                
+
+                <!-- Prose Poem -->
+                <p>Maps are the edges of reality. Canvases of attempted meaning. Order for a chaotic world.</p>
+                <p>Sensemaking of the vast spacetime perhaps we'll never truly understand.</p>
+                <p>Wayfinding as an art form, organizing topography as a philosophical exercise.Every choice we make has ramifications for our wider world. Care is a fleeting currency nowadays.</p>
+                <p>This good earth and the stardust we come from and become doesn't exist for us. We exist for it.</p>
+                <p>The end of something only exists if we decide it does.</p>
+
+                <!-- Credits -->
+                <p>Made by <a href="https://zacharykai.net/">Zachary Kai</a>, for Weird Web October. <br><br> Typset in UnifrakturMaguntia, by j. 'mach' wust. Background is a world map by Samuel Dunn, made in 1794. Border is from a drawing by Francis Seymour Haden, called Bark Refitting.</p>
             </main>
 
         </article>

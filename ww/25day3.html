@@ -15,7 +15,18 @@
         <meta name="last-modified" content="2025-10-03">
         <!-- Stylesheet -->
         <style>
-            
+            body 
+                {background:radial-gradient(circle at 20% 30%,#8e2de2,transparent 60%),radial-gradient(circle at 70% 80%,#4CAF50,transparent 60%),radial-gradient(circle at 90% 10%,#7B1FA2,transparent 60%),radial-gradient(circle at 40% 90%,#C8E6C9,transparent 60%);background-size:150% 150%;background-position:center center;background-blend-mode:screen;min-height:100vh;display:flex;justify-content:center;align-items:center;position:relative;overflow:hidden;font-family:monospace;font-size:1.4em;text-align:center;}
+            body::before
+                {content:'';position:fixed;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 10% 20%,#a28cd1,transparent 70%),radial-gradient(circle at 80% 90%,#e1bee7,transparent 70%),radial-gradient(circle at 30% 60%,#b9f6ca,transparent 70%),radial-gradient(circle at 60% 30%,#ccff90,transparent 70%);background-size:60% 60%,60% 60%,60% 60%,60% 60%;background-repeat:no-repeat;animation:waveScramble 15s ease-in-out infinite alternate;z-index:-1;opacity:0.8;transform-origin:50% 50%;}
+            article
+                {position:relative;z-index:2;background-color:rgba(255,255,255,0.8);padding:150px;margin:20px;max-width:700px;border-radius:70% 30% 80% 20% / 60% 40% 70% 30%;animation:morphShape 10s ease-in-out infinite alternate;box-shadow:0 10px 30px rgba(0,0,0,0.1);overflow:hidden;}
+            article::before
+                {content:'';position:absolute;top:-20px;left:-20px;width:calc(100% + 40px);height:calc(100% + 40px);background:linear-gradient(45deg,#ab47bc,#4db6ac);z-index:1;border-radius:40% 60% 30% 70% / 70% 30% 60% 40%;animation:morphShape2 12s ease-in-out infinite alternate;opacity:0.6;}
+            article::after
+                {content:'';position:absolute;top:-40px;left:-40px;width:calc(100% + 80px);height:calc(100% + 80px);background:linear-gradient(135deg,#66bb6a,#9575cd);z-index:0;border-radius:60% 40% 70% 30% / 30% 70% 40% 60%;animation:morphShape3 14s ease-in-out infinite alternate;opacity:0.4;}
+            @keyframes morphShape
+                {0%{border-radius:70% 30% 80% 20% / 60% 40% 70% 30%;}25%{border-radius:30% 70% 20% 80% / 70% 20% 80% 30%;}50%{border-radius:80% 20% 70% 30% / 30% 70% 40% 60%;}75%{border-radius:20% 80% 30% 70% / 80% 30% 20% 70%;}100%{border-radius:70% 30% 80% 20% / 60% 40% 70% 30%;}}@keyframes morphShape2{0%{border-radius:40% 60% 30% 70% / 70% 30% 60% 40%;}25%{border-radius:60% 40% 70% 30% / 40% 60% 30% 70%;}50%{border-radius:30% 70% 60% 40% / 60% 40% 70% 30%;}75%{border-radius:70% 30% 40% 60% / 30% 70% 40% 60%;}100%{border-radius:40% 60% 30% 70% / 70% 30% 60% 40%;}}@keyframes morphShape3{0%{border-radius:60% 40% 70% 30% / 30% 70% 40% 60%;}25%{border-radius:70% 30% 40% 60% / 60% 40% 70% 30%;}50%{border-radius:40% 60% 30% 70% / 70% 30% 60% 40%;}75%{border-radius:30% 70% 60% 40% / 40% 60% 30% 70%;}100%{border-radius:60% 40% 70% 30% / 30% 70% 40% 60%;}}@keyframes waveScramble{0%{background-position:0% 0%,100% 100%,0% 100%,100% 0%;background-size:60% 60%,60% 60%,60% 60%,60% 60%;transform:rotate(0deg) scale(1);}25%{background-position:10% 40%,90% 60%,20% 90%,80% 10%;background-size:80% 80%,80% 80%,80% 80%,80% 80%;transform:rotate(25deg) scale(1.15);}50%{background-position:50% 80%,50% 20%,10% 50%,90% 50%;background-size:100% 100%,100% 100%,100% 100%,100% 100%;transform:rotate(50deg) scale(1.3);}75%{background-position:90% 30%,10% 70%,70% 0%,30% 100%;background-size:80% 80%,80% 80%,80% 80%,80% 80%;transform:rotate(25deg) scale(1.15);}100%{background-position:0% 0%,100% 100%,0% 100%,100% 0%;background-size:60% 60%,60% 60%,60% 60%,60% 60%;transform:rotate(0deg) scale(1);}}
         </style>
     </head>
 
@@ -27,16 +38,17 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>Is Scrambled A State Of Existence?</h1>
             </header>
 
             <!-- Main -->
             <main>
-                
+                <p>If so, it's the only one I've ever known.</p>
+                <p>Forever oscillating between confusion and awe.</p>
             </main>
 
         </article>
-        
+
     </body>
 
 </html>

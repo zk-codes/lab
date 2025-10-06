@@ -1,88 +1,113 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-    <!-- Head -->
     <head>
-        <!-- Meta Tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Stylesheets & Files -->
         <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention" />
-        <!-- Page Details -->
         <title>Lunaseeker Lab</title>
         <link rel="canonical" href="https://lab.lunaseeker.com/">
         <meta name="date" content="2025-08-17">
         <meta name="last-modified" content="2025-10-05">
         <meta name="description" content="Inspired by James and Joe, to experiment and to avoid breaking my live sites, I've created this minisite to play around in and test stuff.">
+        
+        <style>
+            @font-face {font-family: 'Courier Prime'; src: url(/files/fonts/courierprime.ttf);}
+            body {font-family: 'Courier Prime', monospace; background: #f5f0e8; color: #1a1a1a; line-height: 1.6; padding: 20px; position: relative; overflow-x: hidden;}
+            body::before {content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.4; pointer-events: none; z-index: 1; background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px);}
+            body::after {content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.15; pointer-events: none; z-index: 1; background: radial-gradient(ellipse at 20% 30%, rgba(0,0,0,0.1) 0%, transparent 50%), radial-gradient(ellipse at 80% 70%, rgba(0,0,0,0.08) 0%, transparent 50%), radial-gradient(ellipse at 40% 80%, rgba(0,0,0,0.05) 0%, transparent 50%);}
+            header, main, section {position: relative; z-index: 2;}
+            header {text-align: center; margin-bottom: 40px; padding: 15px; background: white; border: 3px solid #000; box-shadow: 5px 5px 0 rgba(0,0,0,0.3); transform: rotate(-0.5deg);}
+            h1 {font-size: 2em; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; text-shadow: 3px 3px 0 rgba(0,0,0,0.1); transform: rotate(0.5deg);}
+            header p {font-size: 0.9em; font-style: italic; border-top: 2px dashed #333; border-bottom: 2px dashed #333; padding: 8px 0; margin-top: 15px;}
+            main {max-width: 1400px; margin: 0 auto;}
+            .column-wrapper {display: grid; grid-template-columns: 1fr; gap: 30px;}
+            @media (min-width: 768px) {.column-wrapper {grid-template-columns: repeat(2, 1fr);}}
+            @media (min-width: 1024px) {.column-wrapper {grid-template-columns: repeat(3, 1fr); gap: 40px;}}
+            .intro {grid-column: 1 / -1; background: white; padding: 15px; border: 2px solid #000; box-shadow: 4px 4px 0 rgba(0,0,0,0.2); transform: rotate(0.3deg); margin-bottom: 20px;}
+            section {background: white; padding: 20px; border: 2px solid #000; box-shadow: 3px 3px 0 rgba(0,0,0,0.2); position: relative;}
+            section:nth-child(odd) {transform: rotate(-0.7deg);}
+            section:nth-child(even) {transform: rotate(0.5deg);}
+            section::before, section::after {content: ''; position: absolute; width: 60px; height: 25px; background: rgba(255, 253, 208, 0.7); border: 1px solid rgba(200, 190, 140, 0.5); box-shadow: 0 2px 3px rgba(0,0,0,0.1);}
+            section::before {top: -10px; left: 20px; transform: rotate(-5deg);}
+            section::after {bottom: -10px; right: 20px; transform: rotate(8deg);}
+            h2 {font-size: 1.8em; margin-bottom: 10px; text-transform: uppercase; border-bottom: 3px solid #000; padding-bottom: 8px; letter-spacing: 2px;}
+            h3 {font-size: 1.3em; margin: 10px 0 10px 0; text-decoration: underline; text-decoration-style: wavy;}
+            a {color: #000; text-decoration: none; border-bottom: 2px solid #000; font-weight: bold; transition: all 0.2s;}
+            a:hover {background: #000; color: white; padding: 2px 4px;}
+            ul, ol {margin: 15px 0 15px 25px;}
+            li {margin: 8px 0; position: relative;}
+            ul li::marker {content: '★ ';}
+            ol li::marker {font-weight: bold;}
+            p {margin: 12px 0;}
+            .intro p:first-of-type::before {content: '[ '; font-weight: bold;}
+            .intro p:first-of-type::after {content: ' ]'; font-weight: bold;}
+            h2::after {content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 3px; background: rgba(0,0,0,0.1); filter: blur(2px);}
+        </style>
     </head>
 
-    <!-- Body -->
     <body>
 
-        <!-- Header -->
         <header>
             <h1>Lunaseeker Lab</h1>
-            <p>Published: 17 Aug 2025 | Updated: 5 Oct 2025</p>
+            <p>Published: 17 Aug 2025 | Updated: 6 Oct 2025</p>
         </header>
         
-        <!-- Main Content -->
         <main>
 
-            <!-- Introduction -->
-            <p>Inspired by <a href="https://playground.jamesg.blog" rel="noopener">James</a> and <a href="https://lab.artlung.com" rel="noopener">Joe</a>, to experiment and to avoid breaking my live sites, I've created this minisite to play around in and test stuff.</p>
-            <p>Below is a list of everything here.</p>
+            <div class="column-wrapper">
 
-            <!-- Experiments -->
-            <section>
-                <h2>Experiments</h2>
-                <ul>
-                    <li><a href="/tests/256bytes.html">256 Byte Webpage</a> [17 Sep 2025]</li>
-                </ul>
-            </section>
+                <section class="intro">
+                    <p>Hi! I'm Zachary Kai. Inspired by <a href="https://playground.jamesg.blog" rel="noopener">James</a> and <a href="https://lab.artlung.com" rel="noopener">Joe</a>, to experiment and to avoid breaking my live sites, I've created this minisite to play around in and test stuff. Below is a list of everything here. Have fun browsing!</p>
+                </section>
 
-            <!-- Weird Web October -->
-            <section>
-                <h2>Weird Web October</h2>
-                <p>Each tenth month of the year, <a href="https://github.com/jzplusplus" rel="noopener">Jay Zuerndorfer</a> organizes <a href="https://weirdweboctober.website/" rel="noopener">Weird Web October</a>, where for each of the thirty-one days, you make a website inspired by a prompt. I'm participating this year, making webpages.</p>
-                <h3>2025</h3>
-                <ol>
-                    <li><a href="/ww/25day1.html">Transparency</a>: a blackout poem, taken from a pastice of Gatsby quotes.</li>
-                    <li><a href="/ww/25day2.html">Maps</a>: a prose poem with a cartographical theme.</li>
-                    <li><a href="/ww/25day3.html">Scramble</a>: a window into my usual state of mind.</li>
-                    <li><a href="/ww/25day4.html">Filters</a>: in which I ask for the help of a baleen whale.</li>
-                    <li><a href="/ww/25day5.html">Remix</a>: a prose poem about how life, the universe, and everything is a remix.</li>
-                    <li>Solids</li>
-                    <li>Sub-optimal</li>
-                    <li>Containers</li>
-                    <li>Blink</li>
-                    <li>Warning</li>
-                    <li>Camera</li>
-                    <li>Battle</li>
-                    <li>Upside-down</li>
-                    <li>Doubles</li>
-                    <li>Unicode</li>
-                    <li>Transition</li>
-                    <li>Illumination</li>
-                    <li>Trading</li>
-                    <li>Bounce</li>
-                    <li>Hidden</li>
-                    <li>Language</li>
-                    <li>Memory</li>
-                    <li>Style</li>
-                    <li>Counter</li>
-                    <li>Empty</li>
-                    <li>Texture</li>
-                    <li>Spell</li>
-                    <li>Tables</li>
-                    <li>Surprise</li>
-                    <li>Deprecated</li>
-                    <li>Spooky</li>
-                </ol>
-            </section>
-            
+                <section>
+                    <h2>Experiments</h2>
+                    <ul>
+                        <li><a href="/tests/256bytes.html">256 Byte Webpage</a> [17 Sep 2025]</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Weird Web October</h2>
+                    <p>Each tenth month of the year, <a href="https://github.com/jzplusplus" rel="noopener">Jay Zuerndorfer</a> organizes <a href="https://weirdweboctober.website/" rel="noopener">Weird Web October</a>, where for each of the thirty-one days, you make a website inspired by a prompt.</p>
+                    <h3>2025</h3>
+                    <ol>
+                        <li><a href="/ww/25day1.html">Transparency</a>: a blackout poem, taken from a Gatsby quote pastiche.</li>
+                        <li><a href="/ww/25day2.html">Maps</a>: a prose poem with a cartographical theme.</li>
+                        <li><a href="/ww/25day3.html">Scramble</a>: a window into my usual state of mind.</li>
+                        <li><a href="/ww/25day4.html">Filters</a>: in which I ask for the help of a baleen whale.</li>
+                        <li><a href="/ww/25day5.html">Remix</a>: a prose poem about how the universe and everything is a remix.</li>
+                        <li><a href="/ww/25day6.html">Solids</a>: a musing on the foolish dream of the solid state.</li>
+                        <li>Sub-optimal</li>
+                        <li>Containers</li>
+                        <li>Blink</li>
+                        <li>Warning</li>
+                        <li>Camera</li>
+                        <li>Battle</li>
+                        <li>Upside-down</li>
+                        <li>Doubles</li>
+                        <li>Unicode</li>
+                        <li>Transition</li>
+                        <li>Illumination</li>
+                        <li>Trading</li>
+                        <li>Bounce</li>
+                        <li>Hidden</li>
+                        <li>Language</li>
+                        <li>Memory</li>
+                        <li>Style</li>
+                        <li>Counter</li>
+                        <li>Empty</li>
+                        <li>Texture</li>
+                        <li>Spell</li>
+                        <li>Tables</li>
+                        <li>Surprise</li>
+                        <li>Deprecated</li>
+                        <li>Spooky</li>
+                    </ol>
+                </section>
+
+            </div>
         </main>
-        
     </body>
-
 </html>
-        

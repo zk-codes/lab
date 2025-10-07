@@ -15,7 +15,27 @@
         <meta name="last-modified" content="2025-10-07">
         <!-- Stylesheet -->
         <style>
-            
+            @font-face {font-family: 'Bubblegum Sans'; src: url(/files/fonts/bubblegumsans.ttf);}
+            body {min-height: 100vh; margin: 0; overflow: hidden; position: relative; background: linear-gradient(to bottom, #87CEEB 0%, #6495ED 20%, #4682B4 50%, #1E90FF 80%, #000080 100%); background-image: radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.1) 0%, transparent 70%), radial-gradient(circle at 80% 90%, rgba(255, 255, 255, 0.08) 0%, transparent 60%), radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 80%), linear-gradient(to bottom, #87CEEB 0%, #6495ED 20%, #4682B4 50%, #1E90FF 80%, #000080 100%); background-size: 100% 100%; background-repeat: no-repeat; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #f0f8ff; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); padding: 20px; box-sizing: border-box; z-index: 1; position: relative;}
+            .bubble {position: absolute; background-color: rgba(255, 255, 255, 0.25); border-radius: 50%; box-shadow: 0 0 6px rgba(255, 255, 255, 0.5); animation-name: bubbleFloat; animation-timing-function: linear; animation-iteration-count: infinite; bottom: -60px; z-index: 0;}
+            .bubble-1 {width: 18px; height: 18px; left: 10%; animation-duration: 12s; animation-delay: 0s;}
+            .bubble-2 {width: 25px; height: 25px; left: 30%; animation-duration: 18s; animation-delay: 3s;}
+            .bubble-3 {width: 15px; height: 15px; left: 80%; animation-duration: 10s; animation-delay: 1s;}
+            .bubble-4 {width: 22px; height: 22px; left: 55%; animation-duration: 14s; animation-delay: 6s;}
+            .bubble-5 {width: 10px; height: 10px; left: 20%; animation-duration: 9s; animation-delay: 2s;}
+            .bubble-6 {width: 30px; height: 30px; left: 65%; animation-duration: 20s; animation-delay: 8s;}
+            .bubble-7 {width: 17px; height: 17px; left: 5%; animation-duration: 11s; animation-delay: 4s;}
+            .bubble-8 {width: 28px; height: 28px; left: 45%; animation-duration: 16s; animation-delay: 7s;}
+            .bubble-9 {width: 14px; height: 14px; left: 90%; animation-duration: 9s; animation-delay: 0.5s;}
+            .bubble-10 {width: 20px; height: 20px; left: 75%; animation-duration: 13s; animation-delay: 5s;}
+            .bubble-11 {width: 16px; height: 16px; left: 35%; animation-duration: 10s; animation-delay: 1.5s;}
+            .bubble-12 {width: 23px; height: 23px; left: 60%; animation-duration: 17s; animation-delay: 9s;}
+            .bubble-13 {width: 12px; height: 12px; left: 25%; animation-duration: 8s; animation-delay: 2.5s;}
+            .bubble-14 {width: 27px; height: 27px; left: 70%; animation-duration: 19s; animation-delay: 10s;}
+            .bubble-15 {width: 19px; height: 19px; left: 50%; animation-duration: 11s; animation-delay: 4.5s;}
+            @keyframes bubbleFloat {0% {transform: translateY(0) translateX(0); opacity: 0;} 10% {opacity: 1;} 90% {opacity: 1;} 100% {transform: translateY(-130vh) translateX(30px); opacity: 0;}}
+            article {max-width: 900px; margin: auto; font-size: 1.3em}
+            aside {font-size: 0.8em;}
         </style>
     </head>
 
@@ -27,15 +47,47 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>Optimization, Or There Lack Of</h1>
             </header>
 
             <!-- Main -->
             <main>
-                
+
+                <!-- Mini Essay -->
+                <p>So many things are hidden underneath our understanding.</p>
+                <p>Lurking within the layers of the subconcious. In existence while we're unaware.</p>
+                <p>Sometimes we know this, and sometimes we don't.</p>
+                <p>And I'm unsure whether that's supposed to be a good thing.</p>
+                <p>Like most things in life, it just is...until you think about it.</p>
+                <p>Yet, you have that beautiful mind of yours for a reason.</p>
+                <p>An optimal life, taken far too literally, risks being drowned in the world's uncomprimising unpredictability. Force your will upon it too much, and you'll be dashed across the rocks.</p>
+                <p>And yet...optimization? Taken with a gentle moderation?</p>
+                <p>Maybe, just maybe...the subterranean will at last make sense.</p>
+                <p>If only we're prepared, at last, to let the perfect optimal slip from our grasp.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>. Typset in Bubblegum Sans by Sudtipos.</aside>
+
             </main>
 
         </article>
+
+        <!-- Underwater Bubbles -->
+        <section class="bubble bubble-1"></section>
+        <section class="bubble bubble-2"></section>
+        <section class="bubble bubble-3"></section>
+        <section class="bubble bubble-4"></section>
+        <section class="bubble bubble-5"></section>
+        <section class="bubble bubble-6"></section>
+        <section class="bubble bubble-7"></section>
+        <section class="bubble bubble-8"></section>
+        <section class="bubble bubble-9"></section>
+        <section class="bubble bubble-10"></section>
+        <section class="bubble bubble-11"></section>
+        <section class="bubble bubble-12"></section>
+        <section class="bubble bubble-13"></section>
+        <section class="bubble bubble-14"></section>
+        <section class="bubble bubble-15"></section>
         
     </body>
 

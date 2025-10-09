@@ -15,7 +15,24 @@
         <meta name="last-modified" content="2025-10-08">
         <!-- Stylesheet -->
         <style>
-            
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%); font-family: 'Georgia', serif; color: #e8e6e3; line-height: 1.8; overflow-x: hidden; min-height: 100vh;}
+            article {max-width: 800px; margin: 0 auto; padding: 3rem 2rem; position: relative;}
+            header {text-align: center; margin-bottom: 1rem; position: relative;}
+            h1 {font-size: 2.2rem; letter-spacing: 0.3rem; color: #ffd89b; text-shadow: 2px 2px 8px rgba(255, 216, 155, 0.3); animation: float 6s ease-in-out infinite;}
+            @keyframes float {0%, 100% {transform: translateY(0px);} 50% {transform: translateY(-10px);}}
+            .paragraph-container {background: rgba(255, 255, 255, 0.03); border-left: 4px solid #ffd89b; padding: 2rem; margin: 2.5rem 0; border-radius: 0 8px 8px 0; backdrop-filter: blur(10px); position: relative; overflow: hidden;}
+            .paragraph-container::before {content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; background: linear-gradient(45deg, transparent, rgba(255, 216, 155, 0.1), transparent); animation: shimmer 3s linear infinite; pointer-events: none;}
+            @keyframes shimmer {0% {transform: translateX(-100%);} 100% {transform: translateX(100%);}}
+            .nested-thought {margin: 2rem 0; position: relative;}
+            .outer-shell {border: 2px dashed #7b68ee; padding: 2rem; border-radius: 12px; background: linear-gradient(135deg, rgba(123, 104, 238, 0.05) 0%, rgba(123, 104, 238, 0.02) 100%);}
+            .inner-shell {border: 2px dotted #ff6b9d; padding: 1.5rem; border-radius: 8px; background: rgba(255, 107, 157, 0.05);}
+            .core {background: rgba(255, 216, 155, 0.1); padding: 1rem; border-radius: 6px; border: 1px solid rgba(255, 216, 155, 0.3); font-style: italic; text-align: center;}
+            p {margin-bottom: 1.5rem; font-size: 1.1rem; text-indent: 2rem;}
+            .emphasis {color: #ffd89b; font-weight: bold; text-shadow: 0 0 10px rgba(255, 216, 155, 0.5);}
+            .break-line {height: 2px; background: linear-gradient(90deg, transparent, #7b68ee, transparent); margin: 3rem 0; position: relative; overflow: hidden;}
+            .break-line::after {content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent); animation: scan 2s linear infinite;}
+            @keyframes scan {0% {left: -100%;} 100% {left: 200%;}}
         </style>
     </head>
 
@@ -27,16 +44,48 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>Containers Hold The Universe</h1>
             </header>
 
             <!-- Main -->
             <main>
-                
+
+                <!-- Part One -->
+                <section class="paragraph-container">
+                    <p>We're all <span class="emphasis">containers</span>. Bodies hold blood and bone, minds cradle memories.</p>
+                    <p>Our lives, our homes, and our worlds are filled with objects inside objects within other objects. The container doesn't care about its cargo. It just <span class="emphasis">holds</span>.</p>
+                </section>
+
+                <!-- Part Three  -->
+                <section class="paragraph-container">
+                    <p>And it isn't just the physical world.</p>
+                    <p>In code, we create containers constantly. Arrays, objects, sections...we nest them, stack them, arrange them in hierarchies. We've built an entire digital world from the concept of <span class="emphasis">contained space</span>. The internet runs on the logic of inside versus outside.</p>
+                    <p>This page, your browser, your screen, the light it admits, the air, your eyes, your thoughts...containers all the way down.</p>
+                </section>
+
+                <!-- Part Four  -->
+                <section class="nested-thought">
+                    <section class="outer-shell">
+                        <section class="inner-shell">
+                            <section class="core">
+                                But what contains the container? What holds the holder?
+                            </section>
+                        </section>
+                    </section>
+                </section>
+
+                <!-- Part Five -->
+                <section class="paragraph-container">
+                    <p>Because containers leak. Every boundary is provisional, every wall temporary. The container is both limit and possibility.</p>
+                    <p>We spend our lives trying to find the right container: whether it's a lifestyle, friendship, or career. We pour ourselves into shapes that promise to hold us. Sometimes they do. Sometimes they don't.</p>
+                    <p>And sometimes, we discover we were never meant to be contained at all.</p>
+                </section>
+
+                <section class="break-line"></section>
+
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>. Typset in Georgia.</aside>
+
             </main>
-
         </article>
-        
     </body>
-
 </html>

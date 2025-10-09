@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
     <!-- Head-->
     <head>
         <!-- Meta Tags -->
@@ -15,7 +14,22 @@
         <meta name="last-modified" content="2025-10-09">
         <!-- Stylesheet -->
         <style>
-            
+            @font-face {font-family: 'Orbitron'; src: url(/files/fonts/orbitron.ttf);}
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {background: linear-gradient(180deg, #0a0015 0%, #1a0033 50%, #2d0052 100%); color: #ff00ff; font-family: 'Orbitron', monospace; min-height: 100vh; padding: 2rem; position: relative; overflow-x: hidden;}
+            body::before {content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: repeating-linear-gradient(0deg, rgba(255, 0, 255, 0.03) 0px, transparent 1px, transparent 2px, rgba(255, 0, 255, 0.03) 3px); pointer-events: none; z-index: 1; animation: scanlines 8s linear infinite;}
+            @keyframes scanlines {0% {transform: translateY(0);} 100% {transform: translateY(10px);}}
+            article {max-width: 800px; margin: 0 auto; position: relative; z-index: 2; background: rgba(10, 0, 30, 0.6); padding: 3rem; border: 2px solid #ff00ff; box-shadow: 0 0 20px rgba(255, 0, 255, 0.5), 0 0 40px rgba(138, 43, 226, 0.3), inset 0 0 60px rgba(255, 0, 255, 0.1); border-radius: 8px;}
+            header {margin-bottom: 2rem; text-align: center; position: relative;}
+            h1 {font-size: 2.2rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.2em; color: #ff00ff; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #8a2be2, 0 0 40px #8a2be2, 2px 2px 0px #00ffff; animation: blink 3s ease-in-out infinite, glitch 5s infinite; position: relative;}
+            @keyframes blink {0%, 49%, 51%, 100% {opacity: 1;} 50% {opacity: 0.3;}}
+            @keyframes glitch {0%, 90%, 100% {transform: translate(0, 0); text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #8a2be2, 0 0 40px #8a2be2, 2px 2px 0px #00ffff;} 92% {transform: translate(-2px, 2px); text-shadow: -2px 0 0 #ff00ff, 2px 0 0 #00ffff, 0 0 20px #ff00ff;} 94% {transform: translate(2px, -2px); text-shadow: 2px 0 0 #00ffff, -2px 0 0 #ff00ff, 0 0 20px #8a2be2;} 96% {transform: translate(-1px, 1px); text-shadow: -1px 0 0 #ff00ff, 1px 0 0 #00ffff;}}
+            main {line-height: 1.8; font-size: 1.1rem; color: #e0b3ff; text-shadow: 0 0 5px rgba(224, 179, 255, 0.5);}
+            main p {margin-bottom: 1.5rem; animation: fadeIn 1s ease-in;}
+            @keyframes fadeIn {from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}}
+            main::first-letter {font-size: 3em; float: left; line-height: 0.8; margin: 0.1em 0.1em 0 0; color: #00ffff; text-shadow: 0 0 10px #00ffff;}
+            aside {font-size: 0.7rem;}
+            @media (max-width: 768px) {body {padding: 1rem;} article {padding: 1.5rem;} h1 {font-size: 1.8rem; letter-spacing: 0.1em;} main {font-size: 1rem;}}
         </style>
     </head>
 
@@ -27,16 +41,25 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>Don't Forget To Blink</h1>
             </header>
 
             <!-- Main -->
             <main>
+
+                <!-- Mini Essay -->
+                <p>In the electric endless haze, the cursor pulses, the notifications flash, the windows flicker.</p>
+                <p>Everything blinks except us.</p>
+                <p>The artificial version is a call to attention, to a haphazard presence, to remain forever wide-eyed. The physical begs us to return. To disconnection, to pausing, to...ourselves.</p>
+                <p>Don't fight it. Don't forget it.</p>
+                <p>Let your eyes rest. Let the world go dark for just a moment. In that fraction of a second, you might discover what it feels like to be more than a node in the network.</p>
+                <p>Because you're alive. Remember that.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>. Typset in Orbitron.</aside>
                 
             </main>
 
         </article>
-        
     </body>
-
 </html>

@@ -15,7 +15,26 @@
         <meta name="last-modified" content="2025-10-10">
         <!-- Stylesheet -->
         <style>
-            
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {background: linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 50%, #1a1a2e 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; padding: 20px;}
+            article {max-width: 600px; width: 100%;}
+            header {text-align: center; margin-bottom: 40px;}
+            h1 {font-size: 3em; font-weight: normal; letter-spacing: 0.3em; color: #d4af37; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-variant: small-caps;}
+            main {position: relative; background: linear-gradient(to bottom, #0f0f1e 0%, #1a1a2e 100%); border: 3px solid #d4af37; border-radius: 20px; padding: 60px 40px 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);}
+            main::before {content: ''; position: absolute; top: -2px; left: 50%; transform: translateX(-50%); width: 80%; height: 4px; background: linear-gradient(90deg, transparent, #d4af37, transparent);}
+            main::after {content: ''; position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); width: 80%; height: 4px; background: linear-gradient(90deg, transparent, #d4af37, transparent);}
+            section {position: relative; margin-bottom: 30px;}
+            section::before {content: '⚠'; position: absolute; top: -40px; left: 50%; transform: translateX(-50%); font-size: 3em; color: #d4af37; text-shadow: 0 0 20px rgba(212, 175, 55, 0.6); animation: pulse 2s ease-in-out infinite;}
+            @keyframes pulse {0%, 100% {opacity: 1; transform: translateX(-50%) scale(1);} 50% {opacity: 0.6; transform: translateX(-50%) scale(1.1);}}
+            figure {position: relative; width: 200px; height: 300px; margin: 0 auto 30px; border: 2px solid #d4af37; border-radius: 50% 50% 0 0; background: radial-gradient(ellipse at center, #2d1b3d 0%, #0f0f1e 70%); overflow: hidden;}
+            figure::before {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60%; height: 60%; background: radial-gradient(circle, #8b0000 0%, #4d0000 100%); border-radius: 50%; box-shadow: 0 0 40px rgba(139, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.5);}
+            figure::after {content: ''; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 180px; height: 280px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 50% 50% 0 0;}
+            figcaption {position: absolute; bottom: -40px; left: 0; right: 0; text-align: center; color: #d4af37; font-style: italic; font-size: 0.9em; letter-spacing: 0.1em;}
+            p {color: #e8d4a0; line-height: 1.8; text-align: center; font-size: 1.1em; text-indent: 0; margin-bottom: 15px; font-style: italic;}
+            aside {margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(212, 175, 55, 0.3); text-align: center; font-size: 0.9em; color: #a89968;}
+            a {color: #d4af37; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.3s ease;}
+            a:hover {border-bottom-color: #d4af37;}
+            @media (max-width: 600px) {h1 {font-size: 2em; letter-spacing: 0.2em;} main {padding: 50px 25px 30px;} figure {width: 160px; height: 240px;}}
         </style>
     </head>
 
@@ -27,19 +46,27 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>Warning</h1>
             </header>
 
             <!-- Main -->
             <main>
                 
+                <!-- Decorative Frame -->
+                <section>
+                    <figure>
+                        <figcaption>The Eye Of Caution</figcaption>
+                    </figure>
+                </section>
+                
+                <!-- Prose Poem -->
+                <p>The crimson eye watches from within its gilded frame, unblinking. It's seen the paths that twist into themselves, the doorways that promise but never open.</p>
+                <p>The ancient artists understood this: beauty can be a binding thing. Some warnings are meant to be decorative. Others are meant to be heeded.</p>
+                
                 <!-- Credits -->
                 <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>.</aside>
                 
             </main>
-
         </article>
-        
     </body>
-
 </html>

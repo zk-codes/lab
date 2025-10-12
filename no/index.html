@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Page Info -->
+        <title>No-Vember | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/no/">
+        <meta name="date" content="2025-10-12">
+        <meta name="last-modified" content="2025-10-12">
+        <meta name="description" content="Challenge yourself to build 30 webpages, each with a different limitation. Discover what you can create when you say no to certain tools, techniques, or approaches.">
+        <!-- Stylesheet-->
+        <style>
+            /* Layout */
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {font-family: 'Futura', 'Century Gothic', 'Trebuchet MS', sans-serif; background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%); color: #f5f5dc; line-height: 1.7; min-height: 100vh; padding: 3em 1em;}
+            main, header, section, footer {max-width: 1000px; margin: 0 auto;}
+            header, section, footer {position: relative; border: 2px solid #d4af37;}
+            header {margin-bottom: 2em; text-align: center; padding: 3em 2em; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%); border-width: 3px;}
+            section {background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%); padding: 3em; margin-bottom: 3em;}
+            footer {margin-top: 4em; text-align: center; padding: 2em; background: #0f0f0f; color: #c9a961;}
+            /* Decorative Borders */
+            header::before {content: ''; position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border: 1px solid #d4af37; pointer-events: none;}
+            section::before {content: ''; position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px; border: 1px solid #8b7355; pointer-events: none;}
+            header::after, footer::before {content: '◆'; position: absolute; left: 50%; transform: translateX(-50%); background: #1a1a1a; padding: 0 1em; color: #d4af37; font-size: 1.5em;}
+            header::after {top: -15px;}
+            footer::before {bottom: -15px; background: #2d2d2d;}
+            /* Typography */
+            h1 {font-size: 4em; margin-bottom: 0.3em; color: #d4af37; letter-spacing: 0.15em; font-weight: 300; text-transform: uppercase;}
+            h2 {font-size: 1.3em; color: #c9a961; margin-bottom: 1em; letter-spacing: 0.2em; font-weight: 300; text-transform: uppercase; border-top: 2px solid #d4af37; border-bottom: 2px solid #d4af37; padding: 0.8em 0; display: inline-block;}
+            h3 {color: #d4af37; font-size: 1.8em; margin-bottom: 1.2em; text-align: center; letter-spacing: 0.15em; font-weight: 300; text-transform: uppercase; border-bottom: 2px solid #d4af37; padding-bottom: 0.5em;}
+            p {margin-bottom: 1em; font-size: 1.05em; max-width: 700px; margin-left: auto; margin-right: auto;}
+            code {font-size: 1.05em;}
+            .intro-text {text-align: center; max-width: 800px; margin: 0 auto 2em; padding: 0 2em;}
+            strong {color: #d4af37; font-weight: 600; letter-spacing: 0.05em;}
+            em {color: #c9a961; font-style: italic;}
+            /* Lists */
+            ol {list-style: none; margin-top: 2em; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5em;}
+            li {padding: 1.2em; background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%); border: 1px solid #8b7355; position: relative;}
+            li::before {content: ''; position: absolute; top: 8px; left: 8px; right: 8px; bottom: 8px; border: 1px solid #5a4a3a; pointer-events: none;}
+            .day-number {display: inline-block; background: #d4af37; color: #0f0f0f; padding: 0.3em 0.8em; font-weight: 700; margin-right: 0.8em; min-width: 2.5em; text-align: center; letter-spacing: 0.05em; border: 2px solid #8b7355;}
+            /* Links */
+            a {color: #d4af37; text-decoration: none; border-bottom: 1px solid #d4af37;}
+            a:hover {color: #f5d576; border-bottom-color: #f5d576;}
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Header -->
+        <header>
+            <!-- Page Title -->
+            <h1>No-vember</h1>
+            <h2>A Month Of Creative Constraints</h2>
+            <!-- Introduction -->
+            <p>Challenge yourself to build 30 webpages, each with a different limitation. Discover what you can create when you say <em>no</em> to certain tools, techniques, or approaches.</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Philosophy -->
+            <section>
+                <h3>Philosophy</h3>
+                <p class="intro-text">Each day in November, create a webpage with a specific constraint. The goal isn't perfection: it's exploration and creativity. All constraints are designed to maintain usable, accessible code while challenging your creative problem-solving.</p>
+                <p class="intro-text">Share your work, and have fun! I'll link to participants below.</p>
+            </section>
+
+            <!-- 30 Prompts -->
+            <section>
+                <h3>30 Prompts</h3>
+                <ol>
+                    <!-- Day 1 -->
+                    <li>
+                        <span class="day-number">1</span><strong>No Color</strong>
+                        <br>
+                        Create a page using only black, white, and shades of gray. How expressive can monochrome be?
+                    </li>
+                    <!-- Day 2 -->
+                    <li>
+                        <span class="day-number">2</span><strong>No Images</strong>
+                        <br>
+                        Make something interesting using only text, unicode, and CSS. No img tags, no backgrounds.
+                    </li>
+                    <!-- Day 3 -->
+                    <li>
+                        <span class="day-number">3</span><strong>No Classes</strong>
+                        <br>
+                        Style your page without using any CSS classes. Element selectors, IDs, and attribute selectors only.
+                    </li>
+                    <!-- Day 4 -->
+                    <li>
+                        <span class="day-number">4</span><strong>No External CSS</strong>
+                        <br>
+                        All styles must be inline or in a style tag. No separate stylesheet files.
+                    </li>
+                    <!-- Day 5 -->
+                    <li>
+                        <span class="day-number">5</span><strong>No More Than 5 Colors</strong>
+                        <br>
+                        Limit your entire palette to five colors maximum. Choose wisely for hierarchy and emphasis.
+                    </li>
+                    <!-- Day 6 -->
+                    <li>
+                        <span class="day-number">6</span><strong>No Typography Control</strong>
+                        <br>
+                        Use only the browser's default font. No font-family, no web fonts, no font-size changes.
+                    </li>
+                    <!-- Day 7 -->
+                    <li>
+                        <span class="day-number">7</span><strong>No Paragraphs</strong>
+                        <br>
+                        Tell a story or share information without using a p tag. Lists, headings, blockquotes...get creative!
+                    </li>
+                    <!-- Day 8 -->
+                    <li>
+                        <span class="day-number">8</span><strong>No Sharp Corners</strong>
+                        <br>
+                        Everything must be curved. Use border-radius, no 90-degree angles allowed.
+                    </li>
+                    <!-- Day 9 -->
+                    <li>
+                        <span class="day-number">9</span><strong>No Repeating Elements</strong>
+                        <br>
+                        Each HTML element type can only be used once on the page. One h1, one p, one section, etc.
+                    </li>
+                    <!-- Day 10 -->
+                    <li>
+                        <span class="day-number">10</span><strong>No Padding</strong>
+                        <br>
+                        Design your layout without using the padding property anywhere. Margins and borders only.
+                    </li>
+                    <!-- Day 11 -->
+                    <li>
+                        <span class="day-number">11</span><strong>No White Backgrounds</strong>
+                        <br>
+                        No white backgrounds anywhere. Choose your palette carefully while maintaining contrast.
+                    </li>
+                    <!-- Day 12 -->
+                    <li>
+                        <span class="day-number">12</span><strong>No More Than 3 Fonts</strong>
+                        <br>
+                        Limit yourself to three font families maximum across the entire page.
+                    </li>
+                    <!-- Day 13 -->
+                    <li>
+                        <span class="day-number">13</span><strong>No Navigation Bars</strong>
+                        <br>
+                        Create a multi-section page with clear wayfinding but no traditional nav element or menu.
+                    </li>
+                    <!-- Day 14 -->
+                    <li>
+                        <span class="day-number">14</span><strong>No Flexbox</strong>
+                        <br>
+                        Layout your page without using flex. Rediscover older layout methods or use grid and positioning.
+                    </li>
+                    <!-- Day 15 -->
+                    <li>
+                        <span class="day-number">15</span><strong>No Horizontal Layouts</strong>
+                        <br>
+                        Everything flows vertically. No side-by-side elements, vertical composition from top to bottom.
+                    </li>
+                    <!-- Day 16 -->
+                    <li>
+                        <span class="day-number">16</span><strong>No More Than 10 Elements</strong>
+                        <br>
+                        Build with only ten HTML elements (not counting html, head, body, meta, title). Choose wisely.
+                    </li>
+                    <!-- Day 17 -->
+                    <li>
+                        <span class="day-number">17</span><strong>No Animations</strong>
+                        <br>
+                        Create visual interest and draw attention without CSS animations, transitions, or movement effects.
+                    </li>
+                    <!-- Day 18 -->
+                    <li>
+                        <span class="day-number">18</span><strong>No Long Words</strong>
+                        <br>
+                        Write all content using only words of six letters or fewer. Brevity becomes your tool for clarity.
+                    </li>
+                    <!-- Day 19 -->
+                    <li>
+                        <span class="day-number">19</span><strong>No Grid</strong>
+                        <br>
+                        Layout without CSS Grid. Challenge yourself with flexbox, floats, or other positioning methods.
+                    </li>
+                    <!-- Day 20 -->
+                    <li>
+                        <span class="day-number">20</span><strong>No Gradients</strong>
+                        <br>
+                        Use only solid colors throughout. No linear-gradient, radial-gradient, or conic-gradient.
+                    </li>
+                    <!-- Day 21 -->
+                    <li>
+                        <span class="day-number">21</span><strong>No Borders</strong>
+                        <br>
+                        Create visual separation and structure without using border properties. Spacing and color only.
+                    </li>
+                    <!-- Day 22 -->
+                    <li>
+                        <span class="day-number">22</span><strong>No Background Colors</strong>
+                        <br>
+                        No background or background-color. Work with transparency and text color only.
+                    </li>
+                    <!-- Day 23 -->
+                    <li>
+                        <span class="day-number">23</span><strong>No Lists</strong>
+                        <br>
+                        Organize information without ul, ol, or li tags. Find other semantic ways to present grouped content.
+                    </li>
+                    <!-- Day 24 -->
+                    <li>
+                        <span class="day-number">24</span><strong>No Z-Index</strong>
+                        <br>
+                        Layer and overlap elements without using z-index. Rely on document flow and positioning order.
+                    </li>
+                    <!-- Day 25 -->
+                    <li>
+                        <span class="day-number">25</span><strong>No Margin</strong>
+                        <br>
+                        Make a layout where no element uses <code>margin</code>. Explore padding, borders, and positioning.
+                    </li>
+                    <!-- Day 26 -->
+                    <li>
+                        <span class="day-number">26</span><strong>No More Than 3 Sections</strong>
+                        <br>
+                        Organize all your content into three sections. How much can you communicate concisely?
+                    </li>
+                    <!-- Day 27 -->
+                    <li>
+                        <span class="day-number">27</span><strong>No Absolute Positioning</strong>
+                        <br>
+                        Layout without position: absolute. Use relative, fixed, sticky, or static positioning only.
+                    </li>
+                    <!-- Day 28 -->
+                    <li>
+                        <span class="day-number">28</span><strong>No Symmetry</strong>
+                        <br>
+                        Everything must be asymmetrical. No centering, no mirroring. Embrace intentional imbalance.
+                    </li>
+                    <!-- Day 29 -->
+                    <li>
+                        <span class="day-number">29</span><strong>No IDs</strong>
+                        <br>
+                        Style and structure your page without using any ID selectors. Classes and element selectors only.
+                    </li>
+                    <!-- Day 30 -->
+                    <li>
+                        <span class="day-number">30</span><strong>No Constraints</strong>
+                        <br>
+                        After 29 days of limitations, create anything you want. What will you choose?
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Guidelines -->
+            <section>
+                <h3>Guidelines</h3>
+                <p class="intro-text"><strong>Start small.</strong> Each day doesn't need a complete site. A single-page is perfect.</p>
+                <p class="intro-text"><strong>Document your process.</strong> Keep notes about what surprised you, what you discovered.</p>
+                <p class="intro-text"><strong>Accessibility first.</strong> All constraints should still produce usable, accessible code.</p>
+                <p class="intro-text"><strong>Share and learn.</strong> There's no single correct solution.</p>
+                <p class="intro-text"><strong>Have fun.</strong> Skip days if needed, combine prompts, or create your own.</p>
+            </section>
+
+            <!-- Participants -->
+            <section>
+                <h3>Participants</h3>
+                <p class="intro-text">All these folks have taken part.</p>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p><a href="https://zacharykai.net" rel="noopener">Zachary Kai</a> created No-vember in 2025 for folks who like making sites.</p>
+            <p><em>What will you create when you learn to say no?</em></p>
+        </footer>
+
+    </body>
+</html>

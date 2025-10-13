@@ -12,7 +12,7 @@
         <title>No-Vember | Lunaseeker Lab</title>
         <link rel="canonical" href="https://lab.lunaseeker.com/no/">
         <meta name="date" content="2025-10-12">
-        <meta name="last-modified" content="2025-10-12">
+        <meta name="last-modified" content="2025-10-13">
         <meta name="description" content="Challenge yourself to build 30 webpages, each with a different limitation. Discover what you can create when you say no to certain tools, techniques, or approaches.">
         <!-- Stylesheet-->
         <style>
@@ -47,6 +47,22 @@
             /* Links */
             a {color: #d4af37; text-decoration: none; border-bottom: 1px solid #d4af37;}
             a:hover {color: #f5d576; border-bottom-color: #f5d576;}
+            /* Mobile Responsive */
+            @media (max-width: 768px) {
+                body {padding: 1.5em 0.5em;}
+                header {padding: 2em 1em; margin-bottom: 1.5em;}
+                section {padding: 1.5em 1em; margin-bottom: 1.5em;}
+                footer {padding: 1.5em 1em; margin-top: 2em;}
+                h1 {font-size: 2.5em; letter-spacing: 0.1em;}
+                h2 {font-size: 1.1em; letter-spacing: 0.1em; padding: 0.6em 0;}
+                h3 {font-size: 1.4em; letter-spacing: 0.1em;}
+                p, code {font-size: 1em;}
+                .intro-text {padding: 0 0.5em;}
+                ol {grid-template-columns: 1fr; gap: 1em;}
+                li {padding: 1em;}
+                .day-number {display: block; margin-bottom: 0.5em;}
+                header::before, section::before {top: 8px; left: 8px; right: 8px; bottom: 8px;}
+            }
         </style>
     </head>
 
@@ -275,12 +291,21 @@
                 <p class="intro-text">All these folks have taken part.</p>
             </section>
 
+            <!-- Credits -->
+            <section>
+                <h3>Credits</h3>
+                <p class="intro-text">Thanks to <a href="https://gregorlove.com/" rel="noopener">gRegor Morrill</a> and <a href="https://tantek.com/" rel="noopener">Tantek</a> for suggestions on improving the <a href="https://indieweb.org/no-vember" rel="noopener">wiki page</a>!</p>
+            </section>
+
         </main>
 
         <!-- Footer -->
         <footer>
+
+            <!-- Final Signoff -->
             <p><a href="https://zacharykai.net" rel="noopener">Zachary Kai</a> created No-vember in 2025 for folks who like making sites.</p>
             <p><em>What will you create when you learn to say no?</em></p>
+
         </footer>
 
     </body>

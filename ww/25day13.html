@@ -15,7 +15,17 @@
         <meta name="last-modified" content="2025-10-13">
         <!-- Stylesheet -->
         <style>
-            
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            :root { --color-dark-orange: #331a00; --color-main-orange: #ff8800; --color-light-orange: #ffc766; --color-background-deep: #1a0d00;}
+            html {height: 100%;}
+            body {background-color: var(--color-background-deep); color: var(--color-light-orange); font-family: monospace; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden;}
+            article {width: 90%; max-width: 700px; padding: 3rem; background: radial-gradient(circle at 50% 50%, var(--color-dark-orange) 0%, var(--color-background-deep) 100%); border-radius: 1rem; box-shadow: 0 0 40px rgba(255, 136, 0, 0.5); transform: rotateX(5deg) rotateY(-5deg); transition: transform 0.8s ease;}
+            h1 {color: var(--color-main-orange); text-align: center; font-size: 2.5rem; margin-bottom: 2rem; text-shadow: 0 0 10px rgba(255, 136, 0, 0.8);}
+            #awe-container {position: relative; padding: 2rem; line-height: 1.8; text-align: center; font-style: italic; color: var(--color-light-orange);}
+            #inverted-text {display: inline-block; font-size: 1.32rem; font-weight: 300; color: var(--color-light-orange); transform: rotate(180deg) translateX(0) translateY(0); animation: dizzySpin 6s infinite alternate-reverse ease-in-out; padding: 1rem 0; text-shadow: 0 0 15px var(--color-main-orange);}
+            @keyframes dizzySpin { 0% { transform: rotate(180deg) scale(1) translateY(0); filter: blur(0px) brightness(1); } 50% { transform: rotate(178deg) scale(1.02) translateY(-2px); filter: blur(0.5px) brightness(1.1); } 100% { transform: rotate(182deg) scale(1) translateY(0); filter: blur(0px) brightness(1); } }
+            aside {margin-top: 3rem; text-align: center; font-size: 0.8rem; color: var(--color-dark-orange);}
+            aside a {color: var(--color-main-orange); text-decoration: none; font-weight: bold;}
         </style>
     </head>
 
@@ -27,12 +37,25 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>Awe's Inverted Logic</h1>
             </header>
 
             <!-- Main -->
             <main>
                 
+                <section id="awe-container">
+                    <p id="inverted-text">
+                        in this mind of mine <br>
+                        the horizon line is a tether, not a floor <br>
+                        gravity is just a suggestion whispered upward <br>
+                        my mind maps the inverted <br>
+                        i look up to see roots <br>
+                        look down to find the infinite <br>
+                        lost in the dizzying confusion <br>
+                        yet still forever tied to the accompanying awe
+                    </p>
+                </section>
+
                 <!-- Credits -->
                 <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>.</aside>
                 

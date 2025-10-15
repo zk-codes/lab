@@ -15,7 +15,20 @@
         <meta name="last-modified" content="2025-10-14">
         <!-- Stylesheet -->
         <style>
-            
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {background-color: #111; color: #ddd; font-family: monospace; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden;}
+            .container {position: relative; width: 80vw; max-width: 900px; height: 60vh; display: flex; justify-content: center; align-items: center; border-radius: 1rem; box-shadow: 0 0 70px rgba(0, 200, 255, 0.15);}
+            .core-plane {width: 95%; height: fit-content; display: flex; justify-content: space-between; align-items: center; z-index: 10; text-align: center;}
+            .half {width: 49.5%; height: 100%; background: rgba(25, 25, 25, 0.9); border-radius: 0.5rem; padding: 2rem; overflow: auto; border: 1px solid #333; transition: all 0.5s ease;}
+            .left {box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);}
+            .right {transform: translateX(1px); box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);}
+            .poem-text, .consciousness-core-text {font-size: clamp(0.7rem, 1.4vw, 1rem); line-height: 1.7; opacity: 0.95;}
+            .glitch-divider {position: absolute; width: 5px; height: 70%; z-index: 20; box-shadow: 0 0 0 -2px #0ff, 0 5px 15px -1px #f0f, 0 -5px 15px 1px #ff0, 0 0 40px 1px #0ff; background-color: transparent;}
+            .consciousness-core {position: absolute; width: 85%; text-align: center; z-index: 30; top: 100%; left: 50%; transform: translate(-50%, -50%);}
+            .consciousness-core-text {font-style: italic; font-weight: 400; color: #ff0; text-shadow: 0 0 10px rgba(255, 255, 0, 0.8); background-color: rgba(17, 17, 17, 0.7); padding: 0.75rem 1.5rem; border-radius: 0.5rem; line-height: 1.5; display: inline-block;}
+            @media (max-width: 768px) {.container {flex-direction: column; height: 95vh; width: 95vw; padding: 1rem 0;} .core-plane {flex-direction: column; height: 95%;} .half {width: 95%; height: 48%; margin-bottom: 1rem; padding: 1rem;} .right {transform: translateX(0); box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);} .glitch-divider {width: 90%; height: 5px; top: 50%; left: 5%;} .consciousness-core {top: 50%; left: 50%; transform: translate(-50%, -50%) translateY(2rem);}}
+            h1 {text-align: center; font-size: 2.5rem;}
+            aside {margin-top: 6rem; text-align: center;}
         </style>
     </head>
 
@@ -27,19 +40,49 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>Echoing Memories</h1>
             </header>
 
             <!-- Main -->
             <main>
+
+                <!-- Poem -->
+                <section class="container">
+                    <article class="core-plane">
+                        <section class="half left">
+                            <p class="poem-text">
+                                I'm the primary thought: memory and time, anchored in the now. <br>
+                                I stand at the threshold, facing the duplicate: the twin of inverted air. <br>
+                                My pulse beats here, an undeniable drum, driving the true moment forward. <br>
+                                This side is the original, the source, the 'self.'
+                            </p>
+                        </section>
+
+                        <section class="half right">
+                            <p class="poem-text">
+                                Yet this reflection breathes backwards, a perfect lie suspended in the tension of sight. It echoes my motion, its shadow belonging to a different light. <br>
+                                A doubled image, waiting only for my gaze to give it purpose. <br>
+                                It exists only as a hollow echo, the 'mirror' without a soul to sustain it.
+                            </p>
+                        </section>
+                    </article>
+
+                    <section class="glitch-divider"></section>
+
+                    <article class="consciousness-core">
+                        <p class="consciousness-core-text">
+                            The mirror promises a seamless join, but the mind insists on the gap. <br>
+                            Two vessels in the stream, separated by a single atom of self-awareness. <br>
+                            Symmetry shattered, and in that breakage, everything begins.
+                        </p>
+                    </article>
+
+                </section>
                 
                 <!-- Credits -->
                 <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>.</aside>
                 
             </main>
-
         </article>
-        
     </body>
-
 </html>

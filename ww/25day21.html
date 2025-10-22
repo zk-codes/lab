@@ -15,7 +15,20 @@
         <meta name="last-modified" content="2025-10-21">
         <!-- Stylesheet -->
         <style>
-            
+            * {margin: 0; padding: 0; box-sizing: border-box; text-rendering: optimizeLegibility; transition: all 0.3s ease-in-out;}
+            :root {--parchment: #f8f6e8; --text-color: #3f3523; --accent-red: #8f1f2a; --border-gold: #c6b27e; --font-serif: "Palatino Linotype", "Book Antiqua", Palatino, serif;}
+            body {background-color: #a8a397; padding: 40px 10px; font-family: var(--font-serif); color: var(--text-color);}
+            article {max-width: 800px; margin: 0 auto; background-color: var(--parchment); padding: 50px 70px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 0 15px var(--border-gold); border: 2px solid var(--accent-red); position: relative; line-height: 1.6; font-size: 1.1rem;}
+            article::before {content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 5px solid var(--parchment); z-index: 10; pointer-events: none; opacity: 0.8;}
+            header {margin-bottom: 25px; text-align: center; border-bottom: 1px solid var(--text-color); padding-bottom: 15px;}
+            h1 {font-family: var(--font-serif); font-size: 2.5rem; color: var(--accent-red); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 400;}
+            p {margin-bottom: 1.5em; text-align: justify; text-indent: 1.5em;}
+            p:first-of-type::first-letter {float: left; font-size: 5.5rem; line-height: 5rem; padding-right: 0.2em; font-family: var(--font-serif); color: var(--accent-red); margin-top: -10px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);}
+            em {font-style: italic; color: var(--accent-red); font-weight: bold;}
+            aside {margin-top: 40px; text-align: right; font-size: 0.9rem; font-style: italic; color: #777;}
+            aside a {color: var(--accent-red); text-decoration: none;}
+            aside a:hover {text-decoration: underline;}
+            @media (max-width: 850px) {article {padding: 30px 20px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); border: none;}    body {padding: 10px 5px;} h1 {font-size: 1.8rem; letter-spacing: 0.1em;} p:first-of-type::first-letter {font-size: 4rem; line-height: 3.5rem;}}
         </style>
     </head>
 
@@ -27,19 +40,21 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>A Discourse On Mutable Lexicon</h1>
             </header>
 
             <!-- Main -->
             <main>
-                                
+
+                <!-- Mini Essay -->
+                <p>The tongue, that restless muscle, shapes chaotic sound into the immutable law of the word. Language has always been the greatest of human creations. It’s a glorious inheritance. We speak in echoes of the past, borrowing breath from those who catalogued the cosmos long before our time.</p>
+                <p>Yet, permanence is the illusion of a single lifetime. Language is a river. It flows, adapting to the terrain of need. Where once a word required a generation to cross a continent, now a novelty of phrase can circumnavigate the globe in a single second, achieving consensus before the dictionary can even register it.</p>
+                <p>Observe the modern dialect: the abbreviations, the portmanteaus, the ephemeral jargon. It’s strange, yes. <em>But isn't this the gloriousness of it?</em> These prove the human impulse to name, to relate, and to grow, remains intact. The lexicon is alive.</p>
+
                 <!-- Credits -->
                 <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>.</aside>
                 
             </main>
-
         </article>
-        
     </body>
-
 </html>

@@ -9,37 +9,47 @@
         <!-- Stylesheets & Files -->
         <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention" />
         <!-- Page Details -->
-        <title>Weird Web October (Day 20 2025) | Lunaseeker Lab</title>
-        <link rel="canonical" href="https://lab.lunaseeker.com/ww/25day20">
-        <meta name="date" content="2025-10-20">
-        <meta name="last-modified" content="2025-10-20">
+        <title>Weird Web October (Day 19 2025) | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/ww/25day19">
+        <meta name="date" content="2025-10-19">
+        <meta name="last-modified" content="2025-10-19">
         <!-- Stylesheet -->
         <style>
-            
+            @font-face {font-family: 'UnifrakturMaguntia'; src: url(/files/fonts/unifrakturmaguntia.ttf);}
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            :root {--black: #111; --white: #eee; --shadow: #888; --font: 'UnifrakturMaguntia', serif; --duration: 4s;}
+            body {background-color: var(--black); color: var(--white); font-family: serif; min-height: 100vh; display: grid; place-items: center; overflow: hidden;}
+            article {width: 90%; max-width: 700px; position: relative; padding: 2rem; border: 4px double var(--shadow); filter: drop-shadow(0 0 10px var(--shadow));}
+            header h1 {font-family: var(--font); font-size: 2.5rem; text-align: center; color: var(--white); margin-bottom: 2rem; letter-spacing: 0.1rem;}
+            main {position: relative; background-color: var(--black); padding: 1.5rem; line-height: 1.8; font-size: 1.1rem; color: var(--shadow); transition: color 1s ease;}
+            main p {position: relative; z-index: 5; color: var(--white); filter: opacity(0.05); transition: filter 1s ease; padding-bottom: 0.75em;}
+            article:hover main {color: var(--white);}
+            article:hover main p {filter: opacity(0.2);}
+            article:hover header h1 {filter: drop-shadow(0 0 5px var(--white));}
+            aside {margin-top: 2rem; font-size: 0.8rem; text-align: right; color: var(--shadow);}
+            aside a {color: inherit; text-decoration: none; border-bottom: 1px dashed var(--shadow); padding-bottom: 1px;}
+            aside a:hover {color: var(--white); border-color: var(--white);}
         </style>
     </head>
 
-    <!-- Body -->
     <body>
-
-        <!-- Content -->
         <article>
 
-            <!-- Header -->
+            <!-- Title -->
             <header>
-                <h1></h1>
+                <h1>The Shadowed Story</h1>
             </header>
 
-            <!-- Main -->
+            <!-- Mini Essay-->
             <main>
-                                
+                <p>We build walls from what we don't know, of assumption and half-glimpsed things. This becomes the world. We tell ourselves what's unseen can't exist.</p>
+                <p>But this edge is only ever the edge of our light. The quiet space is where the real shape of things resides. The shadows aren't empty. They're full of the stories we chose not to finish, or worse, never started.</p>
+                <p>To look is to admit the scaffolding is fragile. The accepted reality, monochrome and sharp, dissolves in the presence of scrutiny. The hidden isn't a puzzle to solve, but a persistent, patient truth waiting for the courage to crack the frame.</p>
+                
                 <!-- Credits -->
                 <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>.</aside>
                 
             </main>
-
         </article>
-        
     </body>
-
 </html>

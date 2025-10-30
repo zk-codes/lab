@@ -15,7 +15,18 @@
         <meta name="last-modified" content="2025-10-22">
         <!-- Stylesheet -->
         <style>
-            
+            :root {--primary-text:#2c220f; --accent-color: seagreen; --bg-color: limegreen; --shadow-color: rgba(44,34,15,0.2); --font-family: 'Water Brush', serif;}
+            * {margin:0; padding: 0; box-sizing: border-box; }
+            @font-face {font-family: 'Water Brush'; src: url(/files/fonts/waterbrush.ttf);}
+            body {font-family: var(--font-family); background-color: var(--bg-color); color: var(--primary-text); line-height: 1.6; padding: 2rem; text-rendering: optimizeLegibility; letter-spacing: 0.075em;}
+            article {max-width: 700px; margin: 3rem auto; background-color: #fffdf6; border: 2px solid var(--primary-text);box-shadow: 8px 8px 0 0 var(--shadow-color); padding: 2.5rem; position: relative;}
+            h1 {font-size: 3rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--accent-color);border-bottom: 3px double var(--primary-text); padding-bottom: 0.5rem; text-shadow: 1px 1px 0 #fff; animation: glitch 20s infinite alternate;}
+            main p {margin-bottom: 1.5rem; font-size: 1.65rem; font-weight: 400; text-align: justify;}
+            main p:first-of-type::first-letter {font-size: 3em; float: left; line-height: 0.8; padding: 0.1em 0.1em 0 0;font-weight: 700; color: var(--accent-color);}
+            aside {display:block;margin-top:2rem;font-style:italic;font-size:0.85rem;text-align:right;color:#6d5f47;}
+            aside a {color:var(--accent-color);text-decoration:none;border-bottom:1px dotted var(--accent-color);}
+            @keyframes glitch {0%, 100% {transform: translate(0, 0);} 10% {transform: translate(-2px, 2px);} 20% {transform: translate(2px, -2px);} 30% {transform: translate(-1px, 1px);} 40% {transform: translate(1px, -1px);} 50% {transform: translate(0, 0);}}
+            @media (max-width:768px) {body {padding: 1rem;} article {margin: 1rem auto; padding: 1.5rem;} h1 {font-size: 2.2rem;}}
         </style>
     </head>
 
@@ -27,19 +38,24 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>The Continuous Tense</h1>
             </header>
 
             <!-- Main -->
             <main>
-                                
+
+                <!-- Mini Essay -->
+                <p>A life is built in the present, though we prefer the past's quiet architecture. We stop the living to check the archives, to count the relics, to verify the blueprints. But the documents are water-stained, and the ink runs. The glorious memory is simply the perfected forgery, a necessary lie for the next morning.</p>
+                <p>The tension is here: to live is to lose the detail.</p>
+                <p>We can only stand in one place, yet we attempt the split: a ghost in the library, correcting a history that was never meant to be fixed.</p>
+                <p>It seems the only true memory is the skin's persistent warmth, the ache of the current moment.</p>
+                <p>Keep moving. Appreciate what's worth savoring. Remember.</p>
+                <p>To exist is to accept this paradox.</p>
+                
                 <!-- Credits -->
-                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>.</aside>
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>. Typset in Water Brush by Robert Leuschke.</aside>
                 
             </main>
-
         </article>
-        
     </body>
-
 </html>

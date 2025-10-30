@@ -15,7 +15,22 @@
         <meta name="last-modified" content="2025-10-23">
         <!-- Stylesheet -->
         <style>
-            
+            @font-face {font-family: 'Playfair Display'; src: url(/files/fonts/playfairdisplay.ttf);}
+            * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Playfair Display', serif;}
+            :root {--color-primary-dark: #8B4513; --color-primary-medium: #CD853F; --color-primary-light: #F4A460; --color-secondary-light: antiquewhite; --color-text: #4a2d0b; --color-accent: #B22222; --font-size-base: 1.15rem;--max-width-prose: 750px; --margin-v: 4rem;}
+            body {background-color: var(--color-secondary-light); color: var(--color-text); line-height: 1.75; padding: var(--margin-v) 1.5rem; font-size: var(--font-size-base); text-rendering: optimizeLegibility; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh;}
+            article {max-width: var(--max-width-prose); margin: 0; padding: 3rem 4rem; background-color: antiquewhite; border: 3px solid var(--color-primary-light); box-shadow: 10px 10px 0px -2px var(--color-primary-medium); position: relative; overflow: hidden;}
+            article::before {content: ''; position: absolute; top: -30px; left: -30px; width: 100px; height: 100px; background: var(--color-primary-light); opacity: 0.3; transform: rotate(45deg); z-index: 0;}
+            article::after {content: ''; position: absolute; bottom: -30px; right: -30px; width: 100px; height: 100px; background: var(--color-primary-light); opacity: 0.3; transform: rotate(45deg); z-index: 0;}
+            header {margin-bottom: 3.5rem; border-bottom: 3px double var(--color-primary-dark); padding-bottom: 1.5rem; position: relative; z-index: 1;}
+            h1 {font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1.05; text-align: center; color: var(--color-primary-dark); text-shadow: 1px 1px 0px rgba(0,0,0,0.1);}
+            main p {margin-bottom: 1.8rem; position: relative; z-index: 1;}
+            main p:first-of-type {font-style: italic; color: var(--color-primary-dark);}
+            a {color: var(--color-accent); text-decoration: none; border-bottom: 1px dotted var(--color-accent); padding-bottom: 1px;}
+            a:hover {color: var(--color-secondary-light); background-color: var(--color-accent); border-bottom: none; padding: 0 0.3rem;}
+            aside {margin-top: 4rem; font-size: 0.95rem; text-align: center; font-style: italic; color: var(--color-primary-medium); position: relative; z-index: 1;}
+            @media (max-width: 800px) {:root {--font-size-base: 1rem;} h1 {font-size: 2.5rem;} body {padding: 1.5rem 0.8rem;} article {padding: 2rem 1.5rem; box-shadow: 7px 7px 0px -1px var(--color-primary-medium);} main p {text-indent: 2em;}}
+            @media (max-width: 480px) {h1 {font-size: 2rem;} article {padding: 1.5rem 1rem;} article::before, article::after {width: 70px; height: 70px; top: -20px; left: -20px;} article::after {bottom: -20px; right: -20px;}}
         </style>
     </head>
 
@@ -27,19 +42,25 @@
 
             <!-- Header -->
             <header>
-                <h1></h1>
+                <h1>Insubordinate Stylings</h1>
             </header>
 
             <!-- Main -->
             <main>
-                                
+
+                <!-- Mini Essay -->
+                <p>My heart belongs to the serif. Foolish, given I've typed this on a screen.</p>
+                <p>It's a matter of heritage and being too in love with the aesthetics to reconsider. I came to knowledge not through the backlit glow of a screen but through bound paper. This shaped my understanding of what 'style' is.</p>
+                <p>The accoutrements of print are my defaults: hyphens, justified text, dense paragraphs, long sentences, copious asides and meanderings, and thinking through problems with a cacophony of words.</p>
+                <p>A lovely man I consider a friend, upon seeing my site for the first time, asked if I was a reader. I replied with the affirmative, and asked why it was so obvious. His response? Your site reads like you love text.</p>
+                <p>And he's right, I do. It shows in other areas, too. My esoteric vocabulary, disinterest in film as an art form, and yes, mostly solitary existence.</p>
+                <p>The restrictive yet endless expanse of the digital screen demands legibility, scanability, clarity: all worthy pursuits in a world blessed with the internet.</p>
+                <p>Yet there's just something about the little flourishes on every letter I just adore. And I suppose this is why we create websites, isn't it? They're a reflection of us, in all our idiosyncrasies.</p>
+
                 <!-- Credits -->
                 <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>.</aside>
                 
             </main>
-
         </article>
-        
     </body>
-
 </html>

@@ -31,6 +31,18 @@
             aside {text-align: right; font-size: 0.9rem; color: #6c757d; margin-top: 10px;}
             aside a {color: var(--color-accent); text-decoration: none; border-bottom: 1px solid var(--color-accent); padding-bottom: 2px;}
             aside a:hover {color: var(--color-text); border-bottom-color: var(--color-text);}
+            @media (prefers-color-scheme: dark) {
+                :root {--color-bg: #0d1b2a; --color-text: #e0e1dd; --color-soft: #1b263b; --color-accent: #778da9;}
+                body {background-color: var(--color-bg); color: var(--color-text);}
+                article {background: linear-gradient(145deg, #1b263b, #0d1b2a); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);}
+                h1 {color: var(--color-accent);}
+                figure::before {background-color: var(--color-soft);}
+                .orb {background: var(--color-accent); box-shadow: 0 10px 20px rgba(119, 141, 169, 0.4);}
+                @keyframes pulse-shadow {0%, 100% {box-shadow: 0 10px 20px rgba(119, 141, 169, 0.4);} 50% {box-shadow: 0 5px 10px rgba(119, 141, 169, 0.2);}}
+                aside {color: #778da9;}
+                aside a {color: var(--color-accent); border-bottom-color: var(--color-accent);}
+                aside a:hover {color: var(--color-text); border-bottom-color: var(--color-text);}
+            }
         </style>
     </head>
 

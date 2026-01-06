@@ -24,6 +24,15 @@
             aside {margin-top: 3rem; font-style: normal; color: #6d4c41; font-size: 0.9rem; border-top: 1px dashed #bcaaa4; padding-top: 1rem; text-align: right;}
             a {color: #4e342e; text-decoration: underline dashed;}
             a:hover {color: #2b1d19; text-decoration: underline solid;}
+            @media (prefers-color-scheme: dark) {
+                body {background-color: #1a1410; color: #e0d5c7; background-blend-mode: darken;}
+                article {background-color: #2a1f1a; border-color: #5d4037; box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.5);}
+                h1 {color: #e0d5c7; border-bottom-color: #5d4037;}
+                main p {border-left-color: #5d4037;}
+                aside {color: #a89984; border-top-color: #5d4037;}
+                a {color: #bcaaa4;}
+                a:hover {color: #d7ccc8;}
+            }
         </style>
     </head>
 

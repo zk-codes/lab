@@ -27,6 +27,13 @@
             aside a {color:var(--accent-color);text-decoration:none;border-bottom:1px dotted var(--accent-color);}
             @keyframes glitch {0%, 100% {transform: translate(0, 0);} 10% {transform: translate(-2px, 2px);} 20% {transform: translate(2px, -2px);} 30% {transform: translate(-1px, 1px);} 40% {transform: translate(1px, -1px);} 50% {transform: translate(0, 0);}}
             @media (max-width:768px) {body {padding: 1rem;} article {margin: 1rem auto; padding: 1.5rem;} h1 {font-size: 2.2rem;}}
+            @media (prefers-color-scheme: dark) {
+                :root {--primary-text: #e8ddc8; --accent-color: #5fb89c; --bg-color: #1a2b1a; --shadow-color: rgba(232,221,200,0.15);}
+                article {background-color: #2d3a2d; border-color: #5fb89c;}
+                h1 {text-shadow: 1px 1px 0 #1a2b1a;}
+                aside {color: #a89d85;}
+                aside a {color: #7cd4ba; border-bottom-color: #7cd4ba;}
+            }
         </style>
     </head>
 

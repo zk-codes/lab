@@ -21,6 +21,11 @@
             h1, p {background-color: antiquewhite; font-family: BookAntiqua; padding: 0.5em; border: 10px solid transparent; border-image-source: url('/files/imgs/paperborder.jpg'); border-image-slice: 30; border-image-repeat: round; border-image-outset: 0; box-sizing: border-box;}
             h1 {font-size: 2.5em; font-family: 'Unifraktur Maguntia';}
             p {font-size: 1.4em;  font-family: 'Unifraktur Maguntia'; letter-spacing: 3;}
+            @media (prefers-color-scheme: dark) {
+                body {background-image: none; position: relative;}
+                body::before {content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/files/imgs/mapofworld.jpg'); background-repeat: repeat; background-size: 50vw 50vh; filter: brightness(0.3) contrast(1.1); z-index: -1;}
+                h1, p {background-color: #2b2520; color: #e8d4b8; border-color: #746f68;}
+            }
         </style>
     </head>
 

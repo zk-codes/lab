@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 1: No Color | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day1">
+        <meta name="date" content="2025-11-01">
+        <meta name="last-modified" content="2025-11-01">
+        <meta name="description" content="A meditation on monochrome. Day 1 of No-Vember: creating with only black, white, and shades of gray.">
+        <!-- Stylesheet -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Playfair Display', Georgia, serif;
+                min-height: 100vh;
+                background-color: #f8f8f8;
+                color: #1a1a1a;
+                line-height: 1.8;
+                padding: 3rem 1.5rem;
+            }
+            article {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 3rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #ccc;
+            }
+            h1 {
+                font-size: 2.8rem;
+                font-weight: 700;
+                letter-spacing: 0.02em;
+                margin-bottom: 0.5rem;
+                background: linear-gradient(180deg, #000 0%, #555 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .subtitle {
+                font-style: italic;
+                color: #666;
+                font-size: 1.1rem;
+            }
+            main p {
+                margin-bottom: 1.5rem;
+                text-indent: 2em;
+                font-size: 1.1rem;
+            }
+            main p:first-of-type {
+                text-indent: 0;
+            }
+            main p:first-of-type::first-letter {
+                font-size: 4rem;
+                float: left;
+                line-height: 1;
+                padding-right: 0.5rem;
+                color: #333;
+            }
+            .spectrum {
+                display: flex;
+                height: 60px;
+                margin: 2.5rem 0;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            }
+            .spectrum span {
+                flex: 1;
+            }
+            .spectrum span:nth-child(1) {background: #000;}
+            .spectrum span:nth-child(2) {background: #1a1a1a;}
+            .spectrum span:nth-child(3) {background: #333;}
+            .spectrum span:nth-child(4) {background: #4d4d4d;}
+            .spectrum span:nth-child(5) {background: #666;}
+            .spectrum span:nth-child(6) {background: #808080;}
+            .spectrum span:nth-child(7) {background: #999;}
+            .spectrum span:nth-child(8) {background: #b3b3b3;}
+            .spectrum span:nth-child(9) {background: #ccc;}
+            .spectrum span:nth-child(10) {background: #e6e6e6;}
+            .spectrum span:nth-child(11) {background: #f2f2f2;}
+            .spectrum span:nth-child(12) {background: #fff;}
+            blockquote {
+                margin: 2rem 0;
+                padding: 1.5rem 2rem;
+                background: #e8e8e8;
+                border-left: 4px solid #333;
+                font-style: italic;
+                color: #444;
+            }
+            .checkerboard {
+                display: grid;
+                grid-template-columns: repeat(8, 1fr);
+                width: 200px;
+                margin: 2rem auto;
+            }
+            .checkerboard span {
+                aspect-ratio: 1;
+            }
+            .checkerboard span:nth-child(odd) {background: #000;}
+            .checkerboard span:nth-child(even) {background: #fff;}
+            .checkerboard span:nth-child(16n+2),
+            .checkerboard span:nth-child(16n+4),
+            .checkerboard span:nth-child(16n+6),
+            .checkerboard span:nth-child(16n+8),
+            .checkerboard span:nth-child(16n+9),
+            .checkerboard span:nth-child(16n+11),
+            .checkerboard span:nth-child(16n+13),
+            .checkerboard span:nth-child(16n+15) {background: #000;}
+            .checkerboard span:nth-child(16n+1),
+            .checkerboard span:nth-child(16n+3),
+            .checkerboard span:nth-child(16n+5),
+            .checkerboard span:nth-child(16n+7),
+            .checkerboard span:nth-child(16n+10),
+            .checkerboard span:nth-child(16n+12),
+            .checkerboard span:nth-child(16n+14),
+            .checkerboard span:nth-child(16n+16) {background: #fff;}
+            aside {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid #ccc;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #888;
+            }
+            a {
+                color: #333;
+                text-decoration: none;
+                border-bottom: 1px solid #999;
+            }
+            a:hover {
+                color: #000;
+                border-bottom-color: #000;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {background-color: #1a1a1a; color: #e8e8e8;}
+                h1 {background: linear-gradient(180deg, #fff 0%, #aaa 100%); -webkit-background-clip: text; background-clip: text;}
+                .subtitle {color: #999;}
+                main p:first-of-type::first-letter {color: #ccc;}
+                blockquote {background: #2a2a2a; border-left-color: #ccc; color: #bbb;}
+                aside {border-top-color: #444; color: #777;}
+                a {color: #ccc; border-bottom-color: #666;}
+                a:hover {color: #fff; border-bottom-color: #fff;}
+                header {border-bottom-color: #444;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>Absence of Hue</h1>
+                <p class="subtitle">A meditation on the grayscale</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>Photography was born in monochrome. For nearly a century, we captured the world without color and found it beautiful. Perhaps more than beautiful. Perhaps more true.</p>
+
+                <section class="spectrum">
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                </section>
+
+                <p>Between pure black and pure white lies an infinite gradient. We call it gray, but that word flattens the nuance: pewter, charcoal, slate, ash, silver, smoke. Each shade carries weight and meaning.</p>
+
+                <p>When color is removed, other things emerge. Texture becomes paramount. Contrast tells the story. Light and shadow perform their ancient dance without the distraction of chromatic noise.</p>
+
+                <blockquote>
+                    "I think it's because it was a whole new way of seeing, of experiencing. And I think that's what attracted me to black and white, that everything had to be translated."
+                </blockquote>
+
+                <section class="checkerboard">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </section>
+
+                <p>This page uses no color. Not a single hue, saturation, or chromatic value. And yet it speaks. It has rhythm, hierarchy, presence. The constraint reveals the essentials.</p>
+
+                <p>What would you say if you couldn't say it in color?</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Playfair Display.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

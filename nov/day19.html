@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 19: No Grid | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day19">
+        <meta name="date" content="2025-11-19">
+        <meta name="last-modified" content="2025-11-19">
+        <meta name="description" content="Layout without CSS Grid. Day 19 of No-Vember: flexbox, floats, and other methods only.">
+        <!-- NO display: grid or inline-grid allowed -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Petrona', Georgia, serif;
+                min-height: 100vh;
+                background-color: #0a1628;
+                color: #c8d4e0;
+                line-height: 1.9;
+                padding: 2.5rem 1.5rem;
+            }
+            article {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            h1 {
+                font-size: 2.8rem;
+                font-weight: 600;
+                color: #5dade2;
+                margin-bottom: 0.5rem;
+            }
+            .subtitle {
+                font-style: italic;
+                color: #6a8caf;
+            }
+            main p {
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+                color: #5dade2;
+                margin: 2.5rem 0 1rem 0;
+                border-bottom: 2px solid #1e3a5f;
+                padding-bottom: 0.5rem;
+            }
+            /* Flexbox layout */
+            .flex-demo {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin: 2rem 0;
+            }
+            .flex-item {
+                flex: 1 1 200px;
+                background: #132743;
+                padding: 1.5rem;
+                border-radius: 8px;
+                border: 1px solid #1e3a5f;
+            }
+            .flex-item h3 {
+                color: #5dade2;
+                margin-bottom: 0.5rem;
+                font-size: 1.1rem;
+            }
+            .flex-item p {
+                font-size: 0.95rem;
+                margin: 0;
+            }
+            /* Float layout */
+            .float-container {
+                overflow: hidden;
+                margin: 2rem 0;
+            }
+            .float-col {
+                float: left;
+                width: 48%;
+                padding: 1.5rem;
+                background: #132743;
+                border-radius: 8px;
+                border: 1px solid #1e3a5f;
+            }
+            .float-col:first-child {
+                margin-right: 4%;
+            }
+            .float-col h3 {
+                color: #5dade2;
+                margin-bottom: 0.5rem;
+            }
+            .float-col p {
+                margin: 0;
+                font-size: 0.95rem;
+            }
+            /* Inline-block layout */
+            .inline-container {
+                text-align: center;
+                margin: 2rem 0;
+                font-size: 0; /* Remove whitespace between items */
+            }
+            .inline-box {
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+                margin: 0.5rem;
+                background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
+                border-radius: 8px;
+                vertical-align: middle;
+                font-size: 1rem;
+            }
+            .inline-box:nth-child(2) {
+                width: 100px;
+                height: 100px;
+            }
+            .inline-box:nth-child(3) {
+                width: 60px;
+                height: 60px;
+            }
+            .inline-box:nth-child(4) {
+                width: 90px;
+                height: 90px;
+            }
+            /* Position-based layout */
+            .position-demo {
+                position: relative;
+                height: 200px;
+                margin: 2rem 0;
+                background: #0f1e30;
+                border-radius: 8px;
+                border: 1px solid #1e3a5f;
+            }
+            .pos-box {
+                position: absolute;
+                padding: 1rem;
+                background: #132743;
+                border-radius: 4px;
+                font-size: 0.85rem;
+            }
+            .pos-box:nth-child(1) {top: 20px; left: 20px;}
+            .pos-box:nth-child(2) {top: 40px; right: 20px;}
+            .pos-box:nth-child(3) {bottom: 20px; left: 50%; transform: translateX(-50%);}
+            blockquote {
+                background: #132743;
+                border-left: 4px solid #5dade2;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+                font-style: italic;
+            }
+            code {
+                background: #1e3a5f;
+                padding: 0.15em 0.4em;
+                border-radius: 3px;
+                font-family: monospace;
+                font-size: 0.9em;
+            }
+            hr {
+                border: none;
+                height: 1px;
+                background: #1e3a5f;
+                margin: 2.5rem 0;
+            }
+            aside {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid #1e3a5f;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #6a8caf;
+            }
+            a {
+                color: #5dade2;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            @media (max-width: 600px) {
+                .float-col {float: none; width: 100%; margin-right: 0; margin-bottom: 1rem;}
+            }
+            @media (prefers-color-scheme: light) {
+                body {background-color: #f0f5fa; color: #2c3e50;}
+                h1 {color: #2980b9;}
+                .subtitle {color: #5d7a96;}
+                h2 {color: #2980b9; border-bottom-color: #bdd4e7;}
+                .flex-item, .float-col {background: #e8f4fc; border-color: #bdd4e7;}
+                .flex-item h3, .float-col h3 {color: #2980b9;}
+                .inline-box {background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);}
+                .position-demo {background: #dce9f5; border-color: #bdd4e7;}
+                .pos-box {background: #e8f4fc;}
+                blockquote {background: #e8f4fc; border-left-color: #2980b9;}
+                code {background: #dce9f5;}
+                hr {background: #bdd4e7;}
+                aside {border-top-color: #bdd4e7; color: #5d7a96;}
+                a {color: #2980b9;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>Off the Grid</h1>
+                <p class="subtitle">layout without CSS Grid</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>CSS Grid revolutionized web layout. Two-dimensional control, implicit and explicit tracks, named areas - it's powerful. But it's not the only way.</p>
+
+                <h2>Flexbox Approach</h2>
+
+                <section class="flex-demo">
+                    <div class="flex-item">
+                        <h3>One Dimension</h3>
+                        <p>Flexbox excels at distributing space along a single axis. Wrap creates rows.</p>
+                    </div>
+                    <div class="flex-item">
+                        <h3>Flexible Items</h3>
+                        <p>Items grow and shrink based on available space and content.</p>
+                    </div>
+                    <div class="flex-item">
+                        <h3>Alignment</h3>
+                        <p>Centering and distribution become trivial with justify and align.</p>
+                    </div>
+                </section>
+
+                <h2>Float Approach</h2>
+
+                <section class="float-container">
+                    <div class="float-col">
+                        <h3>The Classic</h3>
+                        <p>Before flexbox and grid, floats built most of the web. They still work.</p>
+                    </div>
+                    <div class="float-col">
+                        <h3>Clearfix Required</h3>
+                        <p>Floats collapse their container. The clearfix pattern solves this.</p>
+                    </div>
+                </section>
+
+                <h2>Inline-Block</h2>
+
+                <section class="inline-container">
+                    <div class="inline-box"></div>
+                    <div class="inline-box"></div>
+                    <div class="inline-box"></div>
+                    <div class="inline-box"></div>
+                </section>
+
+                <p>Inline-block elements flow like text but accept width and height. Watch for whitespace between elements - set font-size to zero on the container.</p>
+
+                <h2>Positioning</h2>
+
+                <section class="position-demo">
+                    <div class="pos-box">Top Left</div>
+                    <div class="pos-box">Top Right</div>
+                    <div class="pos-box">Bottom Center</div>
+                </section>
+
+                <hr>
+
+                <blockquote>
+                    Each layout method has its strengths. Grid isn't always better - it's just different. The constraint reminds us to choose the right tool for each job.
+                </blockquote>
+
+                <p>This page uses <code>display: flex</code>, <code>float</code>, <code>display: inline-block</code>, and <code>position</code>. No grid anywhere. The layouts work, the page responds, and sometimes the older tools fit better.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Petrona.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

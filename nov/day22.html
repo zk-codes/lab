@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 22: No Background Colors | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day22">
+        <meta name="date" content="2025-11-22">
+        <meta name="last-modified" content="2025-11-22">
+        <meta name="description" content="Working with transparency. Day 22 of No-Vember: no background or background-color.">
+        <!-- NO background or background-color allowed -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Libre Caslon Text', Georgia, serif;
+                min-height: 100vh;
+                color: #2d2d2d;
+                line-height: 2;
+                padding: 3rem 2rem;
+            }
+            article {
+                max-width: 650px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 3rem;
+                padding-bottom: 2rem;
+                border-bottom: 2px solid #2d2d2d;
+            }
+            h1 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+            }
+            .subtitle {
+                font-style: italic;
+                color: #666;
+            }
+            main p {
+                margin-bottom: 1.8rem;
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+                margin: 2.5rem 0 1rem 0;
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 4px;
+            }
+            /* Box using only border for definition */
+            .bordered-box {
+                border: 2px solid #2d2d2d;
+                padding: 1.5rem;
+                margin: 2rem 0;
+            }
+            .bordered-box p {
+                margin: 0;
+            }
+            /* Text-only visual hierarchy */
+            .big-text {
+                font-size: 3rem;
+                font-weight: 700;
+                text-align: center;
+                margin: 2rem 0;
+                letter-spacing: -0.02em;
+            }
+            /* Using text color for emphasis */
+            .faded {
+                color: #999;
+            }
+            .bold {
+                color: #000;
+                font-weight: 700;
+            }
+            blockquote {
+                border-left: 4px solid #2d2d2d;
+                padding-left: 1.5rem;
+                margin: 2rem 0;
+                font-style: italic;
+            }
+            /* Shapes using borders only */
+            .border-shapes {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                margin: 2.5rem 0;
+            }
+            .border-circle {
+                width: 80px;
+                height: 80px;
+                border: 3px solid #2d2d2d;
+                border-radius: 50%;
+            }
+            .border-square {
+                width: 80px;
+                height: 80px;
+                border: 3px solid #2d2d2d;
+            }
+            .border-diamond {
+                width: 60px;
+                height: 60px;
+                border: 3px solid #2d2d2d;
+                transform: rotate(45deg);
+            }
+            hr {
+                border: none;
+                border-top: 1px solid #2d2d2d;
+                margin: 2.5rem 0;
+            }
+            /* Outline text effect */
+            .outline-text {
+                font-size: 2.5rem;
+                font-weight: 700;
+                text-align: center;
+                margin: 2rem 0;
+                -webkit-text-stroke: 1px #2d2d2d;
+                color: transparent;
+            }
+            aside {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid #ccc;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #888;
+            }
+            a {
+                color: #2d2d2d;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {color: #e0e0e0;}
+                header {border-bottom-color: #e0e0e0;}
+                .subtitle {color: #999;}
+                h2 {text-decoration-color: #e0e0e0;}
+                .bordered-box {border-color: #e0e0e0;}
+                .faded {color: #666;}
+                .bold {color: #fff;}
+                blockquote {border-left-color: #e0e0e0;}
+                .border-circle, .border-square, .border-diamond {border-color: #e0e0e0;}
+                hr {border-top-color: #e0e0e0;}
+                .outline-text {-webkit-text-stroke-color: #e0e0e0;}
+                aside {border-top-color: #444;}
+                a {color: #e0e0e0;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>Transparent</h1>
+                <p class="subtitle">nothing behind the text</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>No element on this page has a background color. Everything is transparent. The text floats against whatever lies beneath.</p>
+
+                <p class="big-text">Just words.</p>
+
+                <p>Without backgrounds, we lose our easiest tool for grouping and separation. But we gain something too: <span class="bold">purity</span>. The content becomes everything. The container disappears.</p>
+
+                <h2>What Remains</h2>
+
+                <div class="bordered-box">
+                    <p>Borders still work. They define edges without filling space. This box contains text but contains no color.</p>
+                </div>
+
+                <p>Text color creates hierarchy. <span class="faded">Faded text recedes.</span> <span class="bold">Bold text advances.</span> The same space, different weights.</p>
+
+                <section class="border-shapes">
+                    <div class="border-circle"></div>
+                    <div class="border-square"></div>
+                    <div class="border-diamond"></div>
+                </section>
+
+                <p>Shapes can exist as outlines. These forms are defined by their edges, not their fill. The inside is nothing, which is also something.</p>
+
+                <hr>
+
+                <blockquote>
+                    "Less is more." But this takes it further. Less than less. The background is not white - it is absent.
+                </blockquote>
+
+                <p class="outline-text">Hollow letters</p>
+
+                <p>The constraint is severe. No cards, no callouts, no highlighted sections - at least not in the traditional sense. But the page still communicates. The eye still finds structure.</p>
+
+                <p>Perhaps we paint backgrounds out of habit. Perhaps transparency is not emptiness, but honesty.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Libre Caslon Text.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

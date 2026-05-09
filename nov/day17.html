@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 17: No Animations | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day17">
+        <meta name="date" content="2025-11-17">
+        <meta name="last-modified" content="2025-11-17">
+        <meta name="description" content="Creating interest without motion. Day 17 of No-Vember: no CSS animations or transitions.">
+        <!-- NO animation, transition, @keyframes allowed -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Crimson Pro', Georgia, serif;
+                min-height: 100vh;
+                background-color: #f4f1eb;
+                color: #2a2a2a;
+                line-height: 1.9;
+                padding: 2.5rem 1.5rem;
+            }
+            article {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 3rem;
+                position: relative;
+            }
+            header::before, header::after {
+                content: '◆';
+                color: #8b0000;
+                position: absolute;
+                top: 50%;
+                font-size: 0.8rem;
+            }
+            header::before {left: 0;}
+            header::after {right: 0;}
+            h1 {
+                font-size: 3rem;
+                font-weight: 600;
+                color: #8b0000;
+                margin-bottom: 0.5rem;
+            }
+            .subtitle {
+                font-style: italic;
+                color: #666;
+                font-size: 1.1rem;
+            }
+            main p {
+                margin-bottom: 1.5rem;
+                font-size: 1.15rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+                color: #8b0000;
+                margin: 2.5rem 0 1rem 0;
+                text-align: center;
+                font-weight: 600;
+            }
+            /* Visual interest without animation */
+            .pattern-box {
+                background:
+                    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(139, 0, 0, 0.03) 10px, rgba(139, 0, 0, 0.03) 20px),
+                    repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(139, 0, 0, 0.03) 10px, rgba(139, 0, 0, 0.03) 20px);
+                padding: 2rem;
+                margin: 2rem 0;
+                border: 1px solid #d4c4a8;
+            }
+            .static-shapes {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                margin: 2rem 0;
+            }
+            .shape-1 {
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(135deg, #8b0000 0%, #cd5c5c 100%);
+                border-radius: 50%;
+                box-shadow: 8px 8px 0 rgba(139, 0, 0, 0.2);
+            }
+            .shape-2 {
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(135deg, #cd5c5c 0%, #8b0000 100%);
+                transform: rotate(45deg);
+                box-shadow: 8px 8px 0 rgba(139, 0, 0, 0.2);
+            }
+            .shape-3 {
+                width: 0;
+                height: 0;
+                border-left: 35px solid transparent;
+                border-right: 35px solid transparent;
+                border-bottom: 60px solid #8b0000;
+                filter: drop-shadow(8px 8px 0 rgba(139, 0, 0, 0.2));
+            }
+            blockquote {
+                background: #fff;
+                border: 2px solid #8b0000;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+                font-style: italic;
+                position: relative;
+            }
+            blockquote::before {
+                content: '"';
+                font-size: 4rem;
+                color: #8b0000;
+                position: absolute;
+                top: -15px;
+                left: 15px;
+                opacity: 0.3;
+                font-family: Georgia, serif;
+            }
+            .typography-play {
+                text-align: center;
+                margin: 2rem 0;
+            }
+            .typography-play span {
+                display: inline-block;
+                font-size: 3rem;
+                color: #8b0000;
+                font-weight: 600;
+            }
+            .typography-play span:nth-child(1) {transform: rotate(-5deg);}
+            .typography-play span:nth-child(2) {transform: translateY(-10px);}
+            .typography-play span:nth-child(3) {transform: rotate(3deg);}
+            .typography-play span:nth-child(4) {transform: scale(1.2);}
+            .typography-play span:nth-child(5) {transform: rotate(-2deg) translateY(5px);}
+            .typography-play span:nth-child(6) {transform: scale(0.9);}
+            .gradient-text {
+                font-size: 2rem;
+                font-weight: 600;
+                text-align: center;
+                background: linear-gradient(90deg, #8b0000 0%, #cd5c5c 50%, #8b0000 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin: 2rem 0;
+            }
+            hr {
+                border: none;
+                height: 3px;
+                background: repeating-linear-gradient(90deg, #8b0000, #8b0000 10px, transparent 10px, transparent 20px);
+                margin: 2.5rem 0;
+            }
+            aside {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid #d4c4a8;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #888;
+            }
+            a {
+                color: #8b0000;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {background-color: #1a1a1a; color: #d0d0d0;}
+                header::before, header::after {color: #cd5c5c;}
+                h1 {color: #cd5c5c;}
+                .subtitle {color: #888;}
+                h2 {color: #cd5c5c;}
+                .pattern-box {background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(205, 92, 92, 0.05) 10px, rgba(205, 92, 92, 0.05) 20px), repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(205, 92, 92, 0.05) 10px, rgba(205, 92, 92, 0.05) 20px); border-color: #3a3a3a;}
+                .shape-1 {background: linear-gradient(135deg, #cd5c5c 0%, #8b4545 100%); box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.3);}
+                .shape-2 {background: linear-gradient(135deg, #8b4545 0%, #cd5c5c 100%); box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.3);}
+                .shape-3 {border-bottom-color: #cd5c5c; filter: drop-shadow(8px 8px 0 rgba(0, 0, 0, 0.3));}
+                blockquote {background: #252525; border-color: #cd5c5c;}
+                blockquote::before {color: #cd5c5c;}
+                .typography-play span {color: #cd5c5c;}
+                .gradient-text {background: linear-gradient(90deg, #cd5c5c 0%, #8b4545 50%, #cd5c5c 100%); -webkit-background-clip: text; background-clip: text;}
+                hr {background: repeating-linear-gradient(90deg, #cd5c5c, #cd5c5c 10px, transparent 10px, transparent 20px);}
+                aside {border-top-color: #3a3a3a;}
+                a {color: #cd5c5c;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>Still Life</h1>
+                <p class="subtitle">visual interest without motion</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>Nothing moves on this page. No fading, no sliding, no pulsing, no spinning. Every visual effect is static, frozen in place like a painting.</p>
+
+                <section class="static-shapes">
+                    <div class="shape-1"></div>
+                    <div class="shape-2"></div>
+                    <div class="shape-3"></div>
+                </section>
+
+                <p>Animation has become the default. Buttons subtly grow on hover. Menus slide into view. Loading spinners rotate endlessly. We've trained users to expect movement.</p>
+
+                <h2>Static Tools</h2>
+
+                <section class="pattern-box">
+                    <p style="margin: 0;">Patterns create visual texture without requiring motion. This box uses repeating gradients - complex enough to hold attention, simple enough to stay still.</p>
+                </section>
+
+                <section class="typography-play">
+                    <span>S</span><span>T</span><span>A</span><span>T</span><span>I</span><span>C</span>
+                </section>
+
+                <p>Typography can play. Transforms like rotation and scale add dynamism to letterforms. The eye moves even when the elements don't.</p>
+
+                <hr>
+
+                <blockquote>
+                    The photograph stopped time. The painting never started it. Perhaps stillness is not absence of interest, but presence of focus.
+                </blockquote>
+
+                <p class="gradient-text">Gradients shift without shifting.</p>
+
+                <p>Shadows suggest depth. Borders create rhythm. Color draws the eye. None of these need to change over time to communicate effectively.</p>
+
+                <p>The constraint reveals: animation is enhancement, not requirement. The page can breathe without literally breathing.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Crimson Pro.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder - Only 3 fonts allowed: Heading, Body, Accent -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 12: No More Than 3 Fonts | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day12">
+        <meta name="date" content="2025-11-12">
+        <meta name="last-modified" content="2025-11-12">
+        <meta name="description" content="A three-part harmony. Day 12 of No-Vember: limited to three font families.">
+        <!-- Stylesheet -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            :root {
+                --font-heading: 'Cinzel', serif;
+                --font-body: 'Lora', Georgia, serif;
+                --font-accent: 'JetBrains Mono', monospace;
+            }
+            body {
+                font-family: var(--font-body);
+                min-height: 100vh;
+                background-color: #0c0c0c;
+                color: #c8c8c8;
+                line-height: 1.9;
+                padding: 2.5rem 1.5rem;
+            }
+            article {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 3rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #333;
+            }
+            h1 {
+                font-family: var(--font-heading);
+                font-size: 2.8rem;
+                font-weight: 700;
+                color: #d4af37;
+                letter-spacing: 0.1em;
+                margin-bottom: 0.8rem;
+            }
+            .subtitle {
+                font-family: var(--font-accent);
+                font-size: 0.9rem;
+                color: #666;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+            }
+            main p {
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-family: var(--font-heading);
+                font-size: 1.6rem;
+                color: #d4af37;
+                margin: 2.5rem 0 1rem 0;
+                letter-spacing: 0.05em;
+            }
+            .font-showcase {
+                margin: 2rem 0;
+                padding: 2rem;
+                background: #141414;
+                border: 1px solid #2a2a2a;
+            }
+            .font-sample {
+                padding: 1.5rem 0;
+                border-bottom: 1px solid #222;
+            }
+            .font-sample:last-child {
+                border-bottom: none;
+            }
+            .font-label {
+                font-family: var(--font-accent);
+                font-size: 0.75rem;
+                color: #666;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                margin-bottom: 0.5rem;
+            }
+            .sample-heading {
+                font-family: var(--font-heading);
+                font-size: 1.8rem;
+                color: #d4af37;
+            }
+            .sample-body {
+                font-family: var(--font-body);
+                font-size: 1.1rem;
+                font-style: italic;
+            }
+            .sample-accent {
+                font-family: var(--font-accent);
+                font-size: 1rem;
+                color: #888;
+            }
+            blockquote {
+                font-family: var(--font-body);
+                font-style: italic;
+                font-size: 1.2rem;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+                border-left: 3px solid #d4af37;
+                background: rgba(212, 175, 55, 0.05);
+            }
+            code {
+                font-family: var(--font-accent);
+                background: #1a1a1a;
+                padding: 0.15em 0.4em;
+                border-radius: 3px;
+                font-size: 0.9em;
+                color: #d4af37;
+            }
+            hr {
+                border: none;
+                height: 1px;
+                background: #333;
+                margin: 2.5rem 0;
+            }
+            aside {
+                font-family: var(--font-accent);
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid #333;
+                font-size: 0.8rem;
+                text-align: center;
+                color: #555;
+            }
+            a {
+                color: #d4af37;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            }
+            a:hover {
+                border-bottom-color: #d4af37;
+            }
+            @media (prefers-color-scheme: light) {
+                body {background-color: #faf8f5; color: #333;}
+                header {border-bottom-color: #ddd;}
+                h1 {color: #8b6914;}
+                .subtitle {color: #888;}
+                h2 {color: #8b6914;}
+                .font-showcase {background: #f5f3f0; border-color: #e0dcd5;}
+                .font-sample {border-bottom-color: #e0dcd5;}
+                .font-label {color: #888;}
+                .sample-heading {color: #8b6914;}
+                .sample-accent {color: #666;}
+                blockquote {border-left-color: #8b6914; background: rgba(139, 105, 20, 0.05);}
+                code {background: #f0ede8; color: #8b6914;}
+                hr {background: #ddd;}
+                aside {border-top-color: #ddd; color: #888;}
+                a {color: #8b6914; border-bottom-color: rgba(139, 105, 20, 0.3);}
+                a:hover {border-bottom-color: #8b6914;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>Three Voices</h1>
+                <p class="subtitle">a typographic trio</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>Typography is orchestration. Too many fonts, and the page becomes cacophony. Too few, and it risks monotony. Three is the classical answer: enough for variety, few enough for harmony.</p>
+
+                <section class="font-showcase">
+                    <div class="font-sample">
+                        <p class="font-label">The Heading · Cinzel</p>
+                        <p class="sample-heading">Capitals of Rome</p>
+                    </div>
+                    <div class="font-sample">
+                        <p class="font-label">The Body · Lora</p>
+                        <p class="sample-body">Where stories unfold in measured rhythm</p>
+                    </div>
+                    <div class="font-sample">
+                        <p class="font-label">The Accent · JetBrains Mono</p>
+                        <p class="sample-accent">// technical precision, fixed width</p>
+                    </div>
+                </section>
+
+                <h2>The Roles They Play</h2>
+
+                <p><strong>Cinzel</strong> commands attention. Its classical letterforms announce sections and titles with the weight of carved stone. It speaks rarely, but decisively.</p>
+
+                <p><strong>Lora</strong> carries the narrative. Contemporary yet rooted in tradition, it balances readability with character. It's the voice you're hearing now.</p>
+
+                <p><strong>JetBrains Mono</strong> handles the technical. When we need <code>precision</code> or metadata, the monospace steps in. It's the quiet specialist.</p>
+
+                <hr>
+
+                <blockquote>
+                    "The details are not the details. They make the design."
+                    <br><br>
+                    — Charles Eames
+                </blockquote>
+
+                <p>Three fonts. Three purposes. The constraint isn't a limitation - it's a composition. Each font knows its role, and together they create a page that feels intentional rather than assembled.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

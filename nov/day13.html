@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 13: No Navigation Bars | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day13">
+        <meta name="date" content="2025-11-13">
+        <meta name="last-modified" content="2025-11-13">
+        <meta name="description" content="Finding your way without menus. Day 13 of No-Vember: clear wayfinding without nav elements.">
+        <!-- Stylesheet -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;}
+            body {
+                font-family: 'Source Serif 4', Georgia, serif;
+                min-height: 100vh;
+                background-color: #f5f0e8;
+                color: #2d2d2d;
+                line-height: 1.9;
+            }
+            article {
+                max-width: 750px;
+                margin: 0 auto;
+                padding: 3rem 2rem;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            h1 {
+                font-size: 3rem;
+                font-weight: 600;
+                color: #1a365d;
+                margin-bottom: 0.5rem;
+            }
+            .subtitle {
+                font-style: italic;
+                color: #666;
+                font-size: 1.1rem;
+            }
+            /* Section markers instead of nav */
+            section {
+                margin: 3rem 0;
+                padding: 2rem 0;
+                border-top: 1px solid #d0c8b8;
+                position: relative;
+            }
+            section::before {
+                content: attr(data-section);
+                position: absolute;
+                top: -0.8em;
+                left: 0;
+                background: #f5f0e8;
+                padding-right: 1em;
+                font-size: 0.8rem;
+                color: #888;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+            }
+            h2 {
+                font-size: 1.6rem;
+                color: #1a365d;
+                margin-bottom: 1rem;
+            }
+            p {
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+            }
+            /* Inline anchor links as wayfinding */
+            .waypoint {
+                display: inline-block;
+                background: #e8e0d0;
+                padding: 0.3em 0.8em;
+                border-radius: 4px;
+                font-size: 0.9rem;
+                color: #1a365d;
+                text-decoration: none;
+                margin: 0.2em;
+                border: 1px solid #d0c8b8;
+                transition: all 0.2s ease;
+            }
+            .waypoint:hover {
+                background: #1a365d;
+                color: #f5f0e8;
+                border-color: #1a365d;
+            }
+            .waypoints {
+                text-align: center;
+                margin: 2rem 0;
+                padding: 1.5rem;
+                background: rgba(0, 0, 0, 0.02);
+                border-radius: 8px;
+            }
+            .waypoints p {
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+                color: #666;
+            }
+            /* Breadcrumb-style contextual links */
+            .context {
+                font-size: 0.85rem;
+                color: #888;
+                margin-bottom: 2rem;
+            }
+            .context a {
+                color: #555;
+                text-decoration: none;
+                border-bottom: 1px dotted #999;
+            }
+            .context a:hover {
+                color: #1a365d;
+                border-bottom-style: solid;
+            }
+            blockquote {
+                background: #e8e0d0;
+                padding: 1.5rem 2rem;
+                border-radius: 0 8px 8px 0;
+                border-left: 4px solid #1a365d;
+                margin: 2rem 0;
+                font-style: italic;
+            }
+            /* Return links */
+            .return {
+                display: block;
+                text-align: right;
+                font-size: 0.85rem;
+                margin-top: 1.5rem;
+            }
+            .return a {
+                color: #888;
+                text-decoration: none;
+            }
+            .return a:hover {
+                color: #1a365d;
+            }
+            .return a::before {
+                content: "↑ ";
+            }
+            aside {
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 1px solid #d0c8b8;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #888;
+            }
+            a {
+                color: #1a365d;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {background-color: #1a1a20; color: #d0d0d0;}
+                h1 {color: #90b0d0;}
+                .subtitle {color: #888;}
+                section {border-top-color: #333;}
+                section::before {background: #1a1a20; color: #666;}
+                h2 {color: #90b0d0;}
+                .waypoint {background: #2a2a30; color: #90b0d0; border-color: #3a3a40;}
+                .waypoint:hover {background: #90b0d0; color: #1a1a20; border-color: #90b0d0;}
+                .waypoints {background: rgba(255, 255, 255, 0.02);}
+                .context a {color: #888; border-bottom-color: #555;}
+                .context a:hover {color: #90b0d0;}
+                blockquote {background: #252530; border-left-color: #90b0d0;}
+                .return a {color: #666;}
+                .return a:hover {color: #90b0d0;}
+                aside {border-top-color: #333;}
+                a {color: #90b0d0;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article id="top">
+
+            <!-- Header -->
+            <header>
+                <h1>Lost & Found</h1>
+                <p class="subtitle">navigation without the nav bar</p>
+            </header>
+
+            <!-- Waypoints instead of nav -->
+            <section class="waypoints" data-section="">
+                <p>This page has no navigation bar. Instead, find your way:</p>
+                <a href="#introduction" class="waypoint">Introduction</a>
+                <a href="#alternatives" class="waypoint">Alternatives</a>
+                <a href="#patterns" class="waypoint">Patterns</a>
+                <a href="#conclusion" class="waypoint">Conclusion</a>
+            </section>
+
+            <!-- Main -->
+            <main>
+
+                <section id="introduction" data-section="Part I">
+                    <h2>The Ubiquitous Bar</h2>
+                    <p>The navigation bar is everywhere. It sits at the top of nearly every website, a horizontal strip of links promising access to other places. We've come to expect it, rely on it, barely notice it.</p>
+                    <p>But what if it weren't there?</p>
+                    <p class="return"><a href="#top">Return to waypoints</a></p>
+                </section>
+
+                <section id="alternatives" data-section="Part II">
+                    <h2>Other Ways to Navigate</h2>
+                    <p>Before the nav bar became standard, websites experimented with many wayfinding patterns. Some are worth revisiting:</p>
+                    <blockquote>
+                        Contextual links embedded in prose. Breadcrumbs showing your location. Section markers indicating structure. Jump links within the page. The table of contents.
+                    </blockquote>
+                    <p>Each method tells you not just where you can go, but where you are. The nav bar floats above the content; these alternatives integrate with it.</p>
+                    <p class="return"><a href="#top">Return to waypoints</a></p>
+                </section>
+
+                <section id="patterns" data-section="Part III">
+                    <h2>Context Over Control</h2>
+                    <p>This page uses section markers (the labels above each section), inline waypoints, and return links. Together, they create orientation without a persistent header.</p>
+                    <p>The constraint forces us to ask: what does navigation really need to accomplish? If it's about knowing where you are and where you can go, perhaps the content itself can provide that.</p>
+                    <p class="return"><a href="#top">Return to waypoints</a></p>
+                </section>
+
+                <section id="conclusion" data-section="Part IV">
+                    <h2>A Different Web</h2>
+                    <p>Without the nav bar, pages feel more like documents and less like applications. The scroll becomes the journey. The text guides rather than the chrome.</p>
+                    <p>Perhaps not every page needs this approach. But the constraint reminds us that the nav bar is a choice, not an inevitability.</p>
+                    <p class="return"><a href="#top">Return to waypoints</a></p>
+                </section>
+
+            </main>
+
+            <!-- Credits -->
+            <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Source Serif 4.</aside>
+
+        </article>
+
+    </body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 24: No Z-Index | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day24">
+        <meta name="date" content="2025-11-24">
+        <meta name="last-modified" content="2025-11-24">
+        <meta name="description" content="Layering without explicit stacking. Day 24 of No-Vember: relying on document flow.">
+        <!-- NO z-index property allowed -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Outfit', system-ui, sans-serif;
+                min-height: 100vh;
+                background-color: #faf7f5;
+                color: #333;
+                line-height: 1.8;
+                padding: 2.5rem 1.5rem;
+                font-weight: 300;
+            }
+            article {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            h1 {
+                font-size: 2.8rem;
+                font-weight: 600;
+                color: #be3455;
+                margin-bottom: 0.5rem;
+            }
+            .subtitle {
+                font-style: italic;
+                color: #888;
+            }
+            main p {
+                margin-bottom: 1.5rem;
+                font-size: 1.05rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #be3455;
+                margin: 2.5rem 0 1rem 0;
+            }
+            /* Layering through DOM order - later elements naturally stack above */
+            .layer-demo {
+                position: relative;
+                height: 250px;
+                margin: 2rem 0;
+            }
+            /* Elements are positioned in DOM order - later = on top */
+            .layer-1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 150px;
+                height: 150px;
+                background-color: #f8d7da;
+                border: 2px solid #be3455;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 400;
+            }
+            .layer-2 {
+                position: absolute;
+                top: 30px;
+                left: 60px;
+                width: 150px;
+                height: 150px;
+                background-color: #d4edda;
+                border: 2px solid #28a745;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 400;
+            }
+            .layer-3 {
+                position: absolute;
+                top: 60px;
+                left: 120px;
+                width: 150px;
+                height: 150px;
+                background-color: #cce5ff;
+                border: 2px solid #007bff;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 400;
+            }
+            /* Card stack using transform */
+            .card-stack {
+                position: relative;
+                width: 250px;
+                height: 150px;
+                margin: 3rem auto;
+            }
+            .card {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 400;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+            /* First card in DOM = bottom of stack (ordered by appearance) */
+            .card:nth-child(1) {
+                background-color: #e8e8e8;
+                transform: rotate(-8deg);
+            }
+            .card:nth-child(2) {
+                background-color: #f0f0f0;
+                transform: rotate(-4deg);
+            }
+            .card:nth-child(3) {
+                background-color: #f8f8f8;
+                transform: rotate(0deg);
+            }
+            blockquote {
+                background: #f8f4f4;
+                border-left: 4px solid #be3455;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+                font-style: italic;
+            }
+            code {
+                background: #f0e8e8;
+                padding: 0.15em 0.4em;
+                border-radius: 4px;
+                font-family: monospace;
+                font-size: 0.9em;
+            }
+            .explanation {
+                background: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 1.5rem;
+                margin: 2rem 0;
+            }
+            hr {
+                border: none;
+                height: 1px;
+                background: #ddd;
+                margin: 2.5rem 0;
+            }
+            aside {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid #ddd;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #888;
+            }
+            a {
+                color: #be3455;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {background-color: #1a1a1a; color: #e0e0e0;}
+                h1 {color: #e86b88;}
+                .subtitle {color: #888;}
+                h2 {color: #e86b88;}
+                .layer-1 {background-color: #3d2a2e; border-color: #e86b88;}
+                .layer-2 {background-color: #2a3d2e; border-color: #4ade80;}
+                .layer-3 {background-color: #2a3040; border-color: #60a5fa;}
+                .card:nth-child(1) {background-color: #2a2a2a;}
+                .card:nth-child(2) {background-color: #333;}
+                .card:nth-child(3) {background-color: #3d3d3d;}
+                blockquote {background: #2a2528; border-left-color: #e86b88;}
+                code {background: #2d2528;}
+                .explanation {background: #222; border-color: #444;}
+                hr {background: #444;}
+                aside {border-top-color: #444;}
+                a {color: #e86b88;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>Natural Order</h1>
+                <p class="subtitle">stacking without z-index</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>The <code>z-index</code> property controls stacking order. But the browser already has rules for this. Later elements in the DOM stack above earlier ones. Position establishes stacking contexts. The order of appearance is the order of layers.</p>
+
+                <h2>DOM Order = Stacking Order</h2>
+
+                <section class="layer-demo">
+                    <div class="layer-1">First (bottom)</div>
+                    <div class="layer-2">Second (middle)</div>
+                    <div class="layer-3">Third (top)</div>
+                </section>
+
+                <section class="explanation">
+                    <p style="margin: 0;">These three boxes have no z-index. They stack naturally: the element that appears later in the HTML sits on top. Layer 1 is in the DOM first, so it's at the bottom. Layer 3 appears last, so it's on top.</p>
+                </section>
+
+                <h2>Stacked Cards</h2>
+
+                <section class="card-stack">
+                    <div class="card">Back</div>
+                    <div class="card">Middle</div>
+                    <div class="card">Front</div>
+                </section>
+
+                <p>The same principle works for any overlapping layout. Put what should be behind first in the HTML. Put what should be in front last. The document order becomes the visual order.</p>
+
+                <hr>
+
+                <blockquote>
+                    Z-index is powerful, but it introduces complexity: stacking contexts, integer wars, "just add 9999." The natural order is simpler. Structure your HTML thoughtfully, and the layers fall into place.
+                </blockquote>
+
+                <p>This constraint forces us to think about document structure as visual structure. The order of our markup matters not just for accessibility and semantics, but for visual composition too.</p>
+
+                <p>No <code>z-index</code> appears anywhere in this stylesheet. The layers work because the DOM works. The browser's default behavior is often enough.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Outfit.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

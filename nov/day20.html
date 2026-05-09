@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 20: No Gradients | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day20">
+        <meta name="date" content="2025-11-20">
+        <meta name="last-modified" content="2025-11-20">
+        <meta name="description" content="Pure solid colors only. Day 20 of No-Vember: no gradients anywhere.">
+        <!-- NO linear-gradient, radial-gradient, conic-gradient allowed -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Vollkorn', Georgia, serif;
+                min-height: 100vh;
+                background-color: #1f2937;
+                color: #e5e7eb;
+                line-height: 1.9;
+                padding: 2.5rem 1.5rem;
+            }
+            article {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 3rem;
+                padding-bottom: 2rem;
+                border-bottom: 4px solid #f59e0b;
+            }
+            h1 {
+                font-size: 2.8rem;
+                font-weight: 600;
+                color: #f59e0b;
+                margin-bottom: 0.5rem;
+            }
+            .subtitle {
+                font-style: italic;
+                color: #9ca3af;
+            }
+            main p {
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+                color: #f59e0b;
+                margin: 2.5rem 0 1rem 0;
+            }
+            /* Color blocks - all solid */
+            .color-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0.5rem;
+                margin: 2rem 0;
+            }
+            .color-block {
+                aspect-ratio: 1;
+                border-radius: 4px;
+            }
+            .c1 {background-color: #111827;}
+            .c2 {background-color: #1f2937;}
+            .c3 {background-color: #374151;}
+            .c4 {background-color: #4b5563;}
+            .c5 {background-color: #f59e0b;}
+            .c6 {background-color: #fbbf24;}
+            .c7 {background-color: #fcd34d;}
+            .c8 {background-color: #fde68a;}
+            .c9 {background-color: #ef4444;}
+            .c10 {background-color: #10b981;}
+            .c11 {background-color: #3b82f6;}
+            .c12 {background-color: #8b5cf6;}
+            /* Solid color cards */
+            .solid-cards {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin: 2rem 0;
+            }
+            .solid-card {
+                flex: 1 1 200px;
+                padding: 1.5rem;
+                border-radius: 8px;
+            }
+            .sc1 {background-color: #f59e0b; color: #111827;}
+            .sc2 {background-color: #374151; color: #e5e7eb; border: 2px solid #4b5563;}
+            .sc3 {background-color: #111827; color: #fbbf24; border: 2px solid #f59e0b;}
+            .solid-card h3 {
+                margin-bottom: 0.5rem;
+                font-size: 1.1rem;
+            }
+            .solid-card p {
+                font-size: 0.95rem;
+                margin: 0;
+            }
+            blockquote {
+                background-color: #374151;
+                border-left: 5px solid #f59e0b;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+                font-style: italic;
+            }
+            /* Layered effect with solid colors */
+            .layer-demo {
+                position: relative;
+                margin: 2rem 0;
+                padding: 2rem;
+            }
+            .layer-demo::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-color: #f59e0b;
+                transform: rotate(2deg);
+                z-index: -2;
+                border-radius: 8px;
+            }
+            .layer-demo::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-color: #374151;
+                z-index: -1;
+                border-radius: 8px;
+            }
+            .layer-demo p {
+                margin: 0;
+            }
+            hr {
+                border: none;
+                height: 4px;
+                background-color: #f59e0b;
+                margin: 2.5rem 0;
+            }
+            aside {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 2px solid #374151;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #9ca3af;
+            }
+            a {
+                color: #f59e0b;
+                text-decoration: none;
+                border-bottom: 1px solid #f59e0b;
+            }
+            a:hover {
+                color: #fbbf24;
+            }
+            @media (prefers-color-scheme: light) {
+                body {background-color: #f9fafb; color: #1f2937;}
+                header {border-bottom-color: #d97706;}
+                h1 {color: #d97706;}
+                .subtitle {color: #6b7280;}
+                h2 {color: #d97706;}
+                .c1 {background-color: #1f2937;}
+                .c2 {background-color: #374151;}
+                .c3 {background-color: #4b5563;}
+                .c4 {background-color: #6b7280;}
+                .sc1 {background-color: #d97706;}
+                .sc2 {background-color: #f3f4f6; color: #1f2937; border-color: #d1d5db;}
+                .sc3 {background-color: #1f2937; color: #fbbf24;}
+                blockquote {background-color: #f3f4f6; border-left-color: #d97706; color: #374151;}
+                .layer-demo::before {background-color: #d97706;}
+                .layer-demo::after {background-color: #f3f4f6;}
+                hr {background-color: #d97706;}
+                aside {border-top-color: #e5e7eb;}
+                a {color: #d97706; border-bottom-color: #d97706;}
+                a:hover {color: #b45309;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>Flat Color</h1>
+                <p class="subtitle">no gradients, no blending</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>Every color on this page is solid. No gradual transitions. No smooth blends. Each hue stands alone, confident in its singularity.</p>
+
+                <section class="color-grid">
+                    <div class="color-block c1"></div>
+                    <div class="color-block c2"></div>
+                    <div class="color-block c3"></div>
+                    <div class="color-block c4"></div>
+                    <div class="color-block c5"></div>
+                    <div class="color-block c6"></div>
+                    <div class="color-block c7"></div>
+                    <div class="color-block c8"></div>
+                    <div class="color-block c9"></div>
+                    <div class="color-block c10"></div>
+                    <div class="color-block c11"></div>
+                    <div class="color-block c12"></div>
+                </section>
+
+                <p>Gradients add sophistication. They suggest depth, movement, light sources. But solid color has its own power: clarity, boldness, honesty.</p>
+
+                <h2>Solid Design</h2>
+
+                <section class="solid-cards">
+                    <div class="solid-card sc1">
+                        <h3>Flat and Bold</h3>
+                        <p>Solid colors make statements. No ambiguity, no transition states.</p>
+                    </div>
+                    <div class="solid-card sc2">
+                        <h3>Border Defined</h3>
+                        <p>Without gradients, borders become essential for visual separation.</p>
+                    </div>
+                    <div class="solid-card sc3">
+                        <h3>Contrast Heavy</h3>
+                        <p>Solid colors demand careful attention to contrast ratios.</p>
+                    </div>
+                </section>
+
+                <hr>
+
+                <blockquote>
+                    "A color is as strong as the impression it creates." — Ivan Albright
+                </blockquote>
+
+                <section class="layer-demo">
+                    <p>Depth can come from layering. This box uses two solid colors at different angles - no gradient needed to create visual interest.</p>
+                </section>
+
+                <p>The web's early days were solid. Flat colors in tables, gif backgrounds that tiled. We added gradients as displays improved. But flat design brought solids back into fashion.</p>
+
+                <p>This constraint isn't primitive - it's confident. Each color is a decision, not a transition.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Vollkorn.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

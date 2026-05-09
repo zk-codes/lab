@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 15: No Horizontal Layouts | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day15">
+        <meta name="date" content="2025-11-15">
+        <meta name="last-modified" content="2025-11-15">
+        <meta name="description" content="Everything flows downward. Day 15 of No-Vember: purely vertical composition.">
+        <!-- NO side-by-side elements -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Newsreader', Georgia, serif;
+                min-height: 100vh;
+                background: linear-gradient(180deg, #1a1a2e 0%, #0f0f1a 100%);
+                color: #d0d0e0;
+                line-height: 2;
+            }
+            article {
+                max-width: 550px;
+                margin: 0 auto;
+                padding: 4rem 2rem;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 4rem;
+            }
+            h1 {
+                font-size: 3rem;
+                font-weight: 600;
+                color: #8b5cf6;
+                margin-bottom: 1rem;
+                line-height: 1.2;
+            }
+            .subtitle {
+                font-style: italic;
+                color: #666;
+                font-size: 1.1rem;
+            }
+            main p {
+                margin-bottom: 2rem;
+                font-size: 1.15rem;
+            }
+            .vertical-line {
+                width: 2px;
+                height: 60px;
+                background: linear-gradient(180deg, transparent, #8b5cf6, transparent);
+                margin: 3rem auto;
+            }
+            h2 {
+                font-size: 1.8rem;
+                color: #8b5cf6;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+            .stack {
+                margin: 3rem 0;
+            }
+            .stack-item {
+                background: rgba(139, 92, 246, 0.1);
+                border: 1px solid rgba(139, 92, 246, 0.3);
+                padding: 1.5rem;
+                margin-bottom: 1rem;
+                border-radius: 8px;
+                text-align: center;
+            }
+            .stack-item:last-child {
+                margin-bottom: 0;
+            }
+            blockquote {
+                background: rgba(139, 92, 246, 0.08);
+                border-left: 3px solid #8b5cf6;
+                padding: 2rem;
+                margin: 3rem 0;
+                font-style: italic;
+                text-align: center;
+            }
+            .poem {
+                text-align: center;
+                margin: 3rem 0;
+                font-style: italic;
+                color: #a0a0b0;
+            }
+            .poem span {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            .emphasis {
+                font-size: 1.5rem;
+                text-align: center;
+                color: #8b5cf6;
+                margin: 2rem 0;
+                font-weight: 600;
+            }
+            hr {
+                border: none;
+                height: 1px;
+                background: rgba(139, 92, 246, 0.3);
+                margin: 3rem 0;
+            }
+            aside {
+                margin-top: 4rem;
+                padding-top: 2rem;
+                border-top: 1px solid rgba(139, 92, 246, 0.3);
+                font-size: 0.9rem;
+                text-align: center;
+                color: #666;
+            }
+            a {
+                color: #8b5cf6;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(139, 92, 246, 0.5);
+            }
+            a:hover {
+                border-bottom-color: #8b5cf6;
+            }
+            @media (prefers-color-scheme: light) {
+                body {background: linear-gradient(180deg, #faf8ff 0%, #f0ebff 100%); color: #333;}
+                h1 {color: #6d28d9;}
+                .subtitle {color: #888;}
+                .vertical-line {background: linear-gradient(180deg, transparent, #6d28d9, transparent);}
+                h2 {color: #6d28d9;}
+                .stack-item {background: rgba(109, 40, 217, 0.05); border-color: rgba(109, 40, 217, 0.2);}
+                blockquote {background: rgba(109, 40, 217, 0.05); border-left-color: #6d28d9;}
+                .poem {color: #666;}
+                .emphasis {color: #6d28d9;}
+                hr {background: rgba(109, 40, 217, 0.2);}
+                aside {border-top-color: rgba(109, 40, 217, 0.2);}
+                a {color: #6d28d9; border-bottom-color: rgba(109, 40, 217, 0.5);}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>The Descent</h1>
+                <p class="subtitle">reading as falling</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>Scroll down. Keep scrolling. This is the only direction allowed.</p>
+
+                <div class="vertical-line"></div>
+
+                <p>No columns sit side by side. No grids spread horizontally. Everything stacks. Everything descends. The page is a single column, a waterfall of content.</p>
+
+                <h2>Why We Go Sideways</h2>
+
+                <p>We put things next to each other to compare them. To show relationships. To fill space efficiently. But vertical reading is older, deeper. Scrolls unrolled downward long before books opened sideways.</p>
+
+                <section class="stack">
+                    <div class="stack-item">First thought</div>
+                    <div class="stack-item">Second thought</div>
+                    <div class="stack-item">Third thought</div>
+                    <div class="stack-item">Each building on the last</div>
+                </section>
+
+                <div class="vertical-line"></div>
+
+                <blockquote>
+                    "The vertical is the axis of contemplation. The horizontal is the axis of comparison."
+                </blockquote>
+
+                <p>Mobile design already knows this. On a phone, everything is vertical. The thumb scrolls up and down. The constraint of the small screen became a design language.</p>
+
+                <section class="poem">
+                    <span>Down</span>
+                    <span>we</span>
+                    <span>go</span>
+                    <span>word</span>
+                    <span>by</span>
+                    <span>word</span>
+                </section>
+
+                <hr>
+
+                <p>This layout has no sidebars. No multi-column layouts. No images floating beside text. Just the steady descent of reading, one element after another.</p>
+
+                <p class="emphasis">↓</p>
+
+                <p>The constraint creates focus. Without horizontal space to fill, content becomes sequence. Time becomes the organizing principle. First this, then that, then the next thing.</p>
+
+                <p>Keep scrolling. You're doing it right.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Newsreader.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

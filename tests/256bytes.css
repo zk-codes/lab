@@ -1,0 +1,11 @@
+* {
+    background: darkblue;
+    color: antiquewhite;
+    font-style: BookAntiqua, serif;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+p {
+    font-style: italic;
+}

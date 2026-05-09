@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 7: No Paragraphs | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day7">
+        <meta name="date" content="2025-11-07">
+        <meta name="last-modified" content="2025-11-07">
+        <meta name="description" content="Telling stories without the p tag. Day 7 of No-Vember: lists, headings, blockquotes, and more.">
+        <!-- Stylesheet -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Alegreya', Georgia, serif;
+                min-height: 100vh;
+                background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+                color: #eee;
+                line-height: 1.9;
+                padding: 2.5rem 1.5rem;
+            }
+            article {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            h1 {
+                font-size: 2.8rem;
+                font-weight: 700;
+                color: #e94560;
+                margin-bottom: 0.5rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+                font-weight: 400;
+                font-style: italic;
+                color: #a0a0c0;
+            }
+            h3 {
+                font-size: 1.5rem;
+                color: #e94560;
+                margin: 2.5rem 0 1rem 0;
+                border-left: 4px solid #e94560;
+                padding-left: 1rem;
+            }
+            main ul {
+                list-style: none;
+                margin: 1.5rem 0;
+            }
+            main ul li {
+                padding: 0.5rem 0;
+                padding-left: 1.5rem;
+                position: relative;
+                font-size: 1.1rem;
+            }
+            main ul li::before {
+                content: "—";
+                position: absolute;
+                left: 0;
+                color: #e94560;
+            }
+            main ol {
+                list-style: none;
+                counter-reset: custom-counter;
+                margin: 1.5rem 0;
+            }
+            main ol li {
+                counter-increment: custom-counter;
+                padding: 0.8rem 0 0.8rem 2.5rem;
+                position: relative;
+                font-size: 1.1rem;
+                border-bottom: 1px solid rgba(233, 69, 96, 0.2);
+            }
+            main ol li::before {
+                content: counter(custom-counter);
+                position: absolute;
+                left: 0;
+                font-weight: 700;
+                color: #e94560;
+                font-size: 1.3rem;
+            }
+            blockquote {
+                background: rgba(233, 69, 96, 0.1);
+                border-left: 3px solid #e94560;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+                font-style: italic;
+            }
+            dl {
+                margin: 2rem 0;
+            }
+            dt {
+                font-weight: 700;
+                color: #e94560;
+                margin-top: 1rem;
+            }
+            dd {
+                margin-left: 1.5rem;
+                font-size: 1.05rem;
+                color: #c0c0d0;
+            }
+            address {
+                font-style: normal;
+                text-align: center;
+                margin: 2rem 0;
+                padding: 1.5rem;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 8px;
+            }
+            pre {
+                font-family: 'Courier New', monospace;
+                background: #0f0f23;
+                padding: 1.5rem;
+                border-radius: 8px;
+                color: #8be9fd;
+                overflow-x: auto;
+                margin: 1.5rem 0;
+            }
+            aside {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid rgba(233, 69, 96, 0.3);
+                font-size: 0.9rem;
+                text-align: center;
+                color: #888;
+            }
+            a {
+                color: #e94560;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            @media (prefers-color-scheme: light) {
+                body {background: linear-gradient(180deg, #fafafa 0%, #f0f0f5 100%); color: #333;}
+                h1 {color: #c73e54;}
+                h2 {color: #666;}
+                h3 {color: #c73e54; border-left-color: #c73e54;}
+                main ul li::before {color: #c73e54;}
+                main ol li {border-bottom-color: rgba(199, 62, 84, 0.2);}
+                main ol li::before {color: #c73e54;}
+                blockquote {background: rgba(199, 62, 84, 0.08); border-left-color: #c73e54;}
+                dt {color: #c73e54;}
+                dd {color: #555;}
+                address {background: rgba(0, 0, 0, 0.03);}
+                pre {background: #2d2d2d; color: #8be9fd;}
+                aside {border-top-color: rgba(199, 62, 84, 0.3); color: #999;}
+                a {color: #c73e54;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>Without Prose</h1>
+                <h2>a story told in fragments</h2>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <h3>The Rules</h3>
+
+                <ul>
+                    <li>No paragraph tags allowed</li>
+                    <li>Lists become our sentences</li>
+                    <li>Headings carry the weight of chapters</li>
+                    <li>Blockquotes speak when we cannot</li>
+                </ul>
+
+                <h3>What We Discover</h3>
+
+                <ol>
+                    <li>Language bends to its container</li>
+                    <li>Rhythm emerges from repetition</li>
+                    <li>The list imposes order on chaos</li>
+                    <li>Constraints do not silence; they focus</li>
+                    <li>Poetry lives in the spaces between</li>
+                </ol>
+
+                <blockquote>
+                    The web was built on documents.
+                    Documents were built on structure.
+                    Structure does not require the paragraph.
+                    The paragraph is a convention.
+                    Conventions can be broken.
+                </blockquote>
+
+                <h3>Definitions</h3>
+
+                <dl>
+                    <dt>Constraint</dt>
+                    <dd>A limitation that reveals hidden possibilities</dd>
+
+                    <dt>List</dt>
+                    <dd>A series of items, each complete in itself</dd>
+
+                    <dt>Fragment</dt>
+                    <dd>A piece that suggests a whole</dd>
+                </dl>
+
+                <h3>A Message</h3>
+
+                <address>
+                    From the desk of semantic HTML<br>
+                    Sent via the World Wide Web<br>
+                    Received by your browser
+                </address>
+
+                <h3>The Code</h3>
+
+                <pre>
+&lt;ul&gt;
+    &lt;li&gt;No paragraphs&lt;/li&gt;
+    &lt;li&gt;Just structure&lt;/li&gt;
+    &lt;li&gt;And meaning&lt;/li&gt;
+&lt;/ul&gt;
+                </pre>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Alegreya.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

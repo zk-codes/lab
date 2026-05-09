@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 28: No Symmetry | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day28">
+        <meta name="date" content="2025-11-28">
+        <meta name="last-modified" content="2025-11-28">
+        <meta name="description" content="Embracing imbalance. Day 28 of No-Vember: no centering, no mirroring, intentional asymmetry.">
+        <!-- NO text-align: center, NO margin: auto for centering, NO symmetric layouts -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Syne', sans-serif;
+                min-height: 100vh;
+                background-color: #fffef8;
+                color: #1a1a1a;
+                line-height: 1.8;
+            }
+            article {
+                max-width: 900px;
+                padding: 4rem 2rem 4rem 4rem;
+            }
+            header {
+                margin-bottom: 4rem;
+                padding-left: 15%;
+            }
+            h1 {
+                font-size: 4rem;
+                font-weight: 700;
+                line-height: 1.1;
+                margin-bottom: 1rem;
+                transform: rotate(-2deg);
+            }
+            .subtitle {
+                font-size: 1.2rem;
+                color: #666;
+                padding-left: 3rem;
+            }
+            main p {
+                font-size: 1.1rem;
+                max-width: 500px;
+            }
+            .right-align {
+                margin-left: auto;
+                margin-right: 2rem;
+                text-align: right;
+            }
+            .left-heavy {
+                margin-right: 30%;
+            }
+            .indented {
+                padding-left: 20%;
+            }
+            .narrow {
+                max-width: 350px;
+            }
+            h2 {
+                font-size: 1.8rem;
+                font-weight: 600;
+                margin: 3rem 0 1.5rem 0;
+            }
+            .h2-offset {
+                margin-left: 10%;
+                transform: rotate(1deg);
+            }
+            .h2-far-left {
+                margin-right: 50%;
+            }
+            /* Asymmetric cards */
+            .card-cluster {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                margin: 3rem 0;
+                padding-left: 5%;
+            }
+            .card {
+                background: #1a1a1a;
+                color: #fffef8;
+                padding: 2rem;
+                border-radius: 8px;
+            }
+            .card:nth-child(1) {
+                width: 55%;
+                transform: rotate(-1deg);
+            }
+            .card:nth-child(2) {
+                width: 35%;
+                margin-top: 3rem;
+                transform: rotate(2deg);
+            }
+            .card:nth-child(3) {
+                width: 40%;
+                margin-left: 15%;
+                transform: rotate(-0.5deg);
+            }
+            .card h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+            .card p {
+                font-size: 0.95rem;
+                color: #ccc;
+                max-width: 100%;
+            }
+            blockquote {
+                background: #f0efe8;
+                padding: 2rem 3rem;
+                margin: 3rem 0 3rem 25%;
+                border-left: 5px solid #1a1a1a;
+                max-width: 400px;
+                transform: rotate(1deg);
+                font-style: italic;
+            }
+            /* Scattered elements */
+            .shapes {
+                position: relative;
+                height: 150px;
+                margin: 3rem 0;
+            }
+            .shape {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background: #1a1a1a;
+                border-radius: 50%;
+            }
+            .shape:nth-child(1) {left: 5%; top: 10%;}
+            .shape:nth-child(2) {left: 25%; top: 60%;}
+            .shape:nth-child(3) {left: 55%; top: 20%;}
+            .shape:nth-child(4) {left: 70%; top: 70%; width: 30px; height: 30px;}
+            .shape:nth-child(5) {left: 85%; top: 35%; width: 50px; height: 50px;}
+            .divider {
+                width: 60%;
+                height: 3px;
+                background: #1a1a1a;
+                margin: 3rem 0 3rem 30%;
+                transform: rotate(-1deg);
+            }
+            aside {
+                margin-top: 4rem;
+                padding-left: 40%;
+                font-size: 0.9rem;
+                color: #666;
+            }
+            a {
+                color: #1a1a1a;
+            }
+            @media (max-width: 600px) {
+                article {padding: 2rem;}
+                header {padding-left: 0;}
+                h1 {font-size: 2.5rem;}
+                .right-align {margin-left: 0; text-align: left;}
+                .indented {padding-left: 5%;}
+                .card-cluster {padding-left: 0;}
+                .card:nth-child(1), .card:nth-child(2), .card:nth-child(3) {width: 100%; margin-left: 0;}
+                blockquote {margin-left: 5%;}
+                aside {padding-left: 0;}
+            }
+            @media (prefers-color-scheme: dark) {
+                body {background-color: #0a0a0a; color: #e8e8e0;}
+                .subtitle {color: #888;}
+                h2 {color: #e8e8e0;}
+                .card {background: #e8e8e0; color: #0a0a0a;}
+                .card p {color: #444;}
+                blockquote {background: #1a1a18; border-left-color: #e8e8e0;}
+                .shape {background: #e8e8e0;}
+                .divider {background: #e8e8e0;}
+                a {color: #e8e8e0;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>Off<br>Balance</h1>
+                <p class="subtitle">intentional imbalance</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p class="left-heavy">Nothing on this page is centered. No element mirrors another. The layout leans, shifts, refuses to settle into comfortable symmetry.</p>
+
+                <h2 class="h2-offset">Why Asymmetry?</h2>
+
+                <p class="indented narrow">Symmetry is safe. It signals order, stability, predictability. We default to it because it feels "correct."</p>
+
+                <p class="right-align">But asymmetry creates energy. It suggests movement, tension, life. The eye travels differently across an unbalanced page.</p>
+
+                <section class="card-cluster">
+                    <div class="card">
+                        <h3>Tension Creates Interest</h3>
+                        <p>Visual weight distributed unevenly pulls the eye across the composition.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Movement</h3>
+                        <p>Asymmetry implies action, not rest.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Uniqueness</h3>
+                        <p>Balanced layouts blend together. Unbalanced ones stand apart.</p>
+                    </div>
+                </section>
+
+                <h2 class="h2-far-left">The Shapes Scatter</h2>
+
+                <section class="shapes">
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                </section>
+
+                <div class="divider"></div>
+
+                <blockquote>
+                    "Perfect symmetry is the symmetry of a grave." — Asymmetry introduces life because life is never perfectly balanced.
+                </blockquote>
+
+                <p class="narrow">The constraint forbids centering, mirroring, and equal distribution. What emerges is a page that breathes differently. It may feel uncomfortable. That discomfort is the point.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Syne.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

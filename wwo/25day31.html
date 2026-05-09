@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head-->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Stylesheets & Files -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention" />
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>Weird Web October (Day 31 2025) | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/wwo/25day31">
+        <meta name="date" content="2025-10-31">
+        <meta name="last-modified" content="2025-10-31">
+        <!-- Stylesheet -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            :root {
+                --blood: #8b0000;
+                --bone: #f5f5dc;
+                --shadow: #0a0a0a;
+                --ghost: rgba(245, 245, 220, 0.1);
+            }
+            body {
+                font-family: 'Crimson Text', Georgia, serif;
+                min-height: 100vh;
+                background-color: var(--shadow);
+                background-image:
+                    radial-gradient(ellipse at 20% 80%, rgba(139, 0, 0, 0.15) 0%, transparent 50%),
+                    radial-gradient(ellipse at 80% 20%, rgba(75, 0, 130, 0.1) 0%, transparent 50%);
+                color: var(--bone);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                position: relative;
+                overflow-x: hidden;
+            }
+            body::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background:
+                    repeating-linear-gradient(
+                        0deg,
+                        transparent,
+                        transparent 2px,
+                        rgba(0, 0, 0, 0.1) 2px,
+                        rgba(0, 0, 0, 0.1) 4px
+                    );
+                pointer-events: none;
+                z-index: 100;
+            }
+            article {
+                max-width: 650px;
+                padding: 3rem;
+                position: relative;
+                z-index: 1;
+            }
+            .fog {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 200%;
+                height: 30%;
+                background: linear-gradient(to top, rgba(100, 100, 100, 0.3), transparent);
+                animation: fog-drift 20s linear infinite;
+                pointer-events: none;
+                z-index: 0;
+            }
+            @keyframes fog-drift {
+                from {transform: translateX(0);}
+                to {transform: translateX(-50%);}
+            }
+            header {
+                text-align: center;
+                margin-bottom: 2.5rem;
+            }
+            h1 {
+                font-family: 'Creepster', cursive;
+                font-size: 4rem;
+                font-weight: 400;
+                color: var(--blood);
+                text-shadow:
+                    2px 2px 0 #000,
+                    4px 4px 0 rgba(139, 0, 0, 0.5),
+                    0 0 30px rgba(139, 0, 0, 0.8);
+                letter-spacing: 0.05em;
+                animation: flicker 4s ease-in-out infinite;
+            }
+            @keyframes flicker {
+                0%, 100% {opacity: 1;}
+                92% {opacity: 1;}
+                93% {opacity: 0.8;}
+                94% {opacity: 1;}
+                96% {opacity: 0.9;}
+                97% {opacity: 1;}
+            }
+            .cobweb {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100px;
+                height: 100px;
+                opacity: 0.3;
+                background:
+                    linear-gradient(45deg, transparent 45%, var(--bone) 45%, var(--bone) 46%, transparent 46%),
+                    linear-gradient(-45deg, transparent 45%, var(--bone) 45%, var(--bone) 46%, transparent 46%),
+                    linear-gradient(to right, transparent 49%, var(--bone) 49%, var(--bone) 51%, transparent 51%),
+                    linear-gradient(to bottom, transparent 49%, var(--bone) 49%, var(--bone) 51%, transparent 51%);
+            }
+            main p {
+                line-height: 2;
+                font-size: 1.15rem;
+                margin-bottom: 1.5rem;
+                text-indent: 1.5em;
+            }
+            .whisper {
+                font-style: italic;
+                color: rgba(245, 245, 220, 0.6);
+                font-size: 0.95em;
+            }
+            .drip {
+                position: relative;
+                color: var(--blood);
+                font-weight: bold;
+            }
+            .drip::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                width: 3px;
+                height: 0;
+                background: var(--blood);
+                border-radius: 50%;
+                animation: drip 3s ease-in infinite;
+            }
+            @keyframes drip {
+                0%, 60% {height: 0; opacity: 1;}
+                80% {height: 15px; opacity: 1;}
+                100% {height: 20px; opacity: 0;}
+            }
+            .ghost-text {
+                opacity: 0.4;
+                transition: opacity 0.5s ease;
+            }
+            .ghost-text:hover {
+                opacity: 1;
+            }
+            .cemetery {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                margin: 2.5rem 0;
+                padding: 1.5rem;
+            }
+            .tombstone {
+                width: 60px;
+                height: 80px;
+                background: linear-gradient(180deg, #4a4a4a 0%, #2d2d2d 100%);
+                border-radius: 30px 30px 0 0;
+                position: relative;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            }
+            .tombstone::before {
+                content: 'RIP';
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: 'Creepster', cursive;
+                font-size: 0.9rem;
+                color: #666;
+            }
+            .tombstone::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: -10px;
+                right: -10px;
+                height: 10px;
+                background: #1a1a1a;
+                border-radius: 50%;
+            }
+            .eyes {
+                position: fixed;
+                width: 30px;
+                height: 10px;
+                opacity: 0;
+                animation: eyes-appear 8s ease-in-out infinite;
+            }
+            .eyes::before, .eyes::after {
+                content: '';
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: #ff0;
+                border-radius: 50%;
+                box-shadow: 0 0 10px #ff0;
+            }
+            .eyes::before {left: 0;}
+            .eyes::after {right: 0;}
+            .eyes:nth-child(1) {top: 20%; left: 5%; animation-delay: 0s;}
+            .eyes:nth-child(2) {top: 60%; right: 8%; animation-delay: 3s;}
+            .eyes:nth-child(3) {top: 80%; left: 15%; animation-delay: 5s;}
+            @keyframes eyes-appear {
+                0%, 40%, 100% {opacity: 0;}
+                45%, 55% {opacity: 1;}
+                50% {opacity: 0;}
+                52% {opacity: 1;}
+            }
+            aside {
+                margin-top: 2.5rem;
+                font-size: 0.85rem;
+                text-align: right;
+                color: rgba(245, 245, 220, 0.5);
+            }
+            a {
+                color: var(--blood);
+                text-decoration: none;
+                border-bottom: 1px solid rgba(139, 0, 0, 0.5);
+                transition: all 0.3s ease;
+            }
+            a:hover {
+                border-bottom-color: var(--blood);
+                text-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+            }
+            @media (prefers-color-scheme: light) {
+                body {background-color: #1a1a1a;}
+            }
+            @media (prefers-reduced-motion: reduce) {
+                *, *::before, *::after {
+                    animation: none !important;
+                }
+                .fog {display: none;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Atmospheric Elements -->
+        <div class="fog"></div>
+        <div class="eyes"></div>
+        <div class="eyes"></div>
+        <div class="eyes"></div>
+
+        <!-- Content -->
+        <article>
+
+            <div class="cobweb"></div>
+
+            <!-- Header -->
+            <header>
+                <h1>Happy Halloween</h1>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>The veil is thin tonight. Between the living web and the dead links. Between the pages that load and the ones that return <span class="drip">404</span>.</p>
+
+                <p class="ghost-text">Somewhere, a server spins in an abandoned data center. Its pages unseen for years. Ghost traffic from bots that don't know the site has died. This is the true horror of the internet: nothing ever fully disappears, yet nothing truly persists.</p>
+
+                <section class="cemetery">
+                    <div class="tombstone"></div>
+                    <div class="tombstone"></div>
+                    <div class="tombstone"></div>
+                </section>
+
+                <p>We build monuments in HTML. We carve our names in CSS. And when the hosting bill goes unpaid, we join the graveyard of Geocities, of defunct blogs, of abandoned dreams.</p>
+
+                <p class="whisper">But tonight, the dead sites walk again. Hover over the darkness. You might see something looking back.</p>
+
+                <p>Happy Halloween. May your builds succeed and your deployments be uneventful. May your links never rot and your backups always restore.</p>
+
+                <p class="whisper">And if you hear typing from an empty room... don't look.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>. Typeset in Creepster and Crimson Text.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+
+</html>

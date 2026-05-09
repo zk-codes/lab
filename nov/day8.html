@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 8: No Sharp Corners | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day8">
+        <meta name="date" content="2025-11-08">
+        <meta name="last-modified" content="2025-11-08">
+        <meta name="description" content="Everything curves. Day 8 of No-Vember: no 90-degree angles allowed.">
+        <!-- Stylesheet -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Nunito', system-ui, sans-serif;
+                min-height: 100vh;
+                background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+                color: #4a3728;
+                line-height: 1.8;
+                padding: 2.5rem 1.5rem;
+            }
+            article {
+                max-width: 700px;
+                margin: 0 auto;
+                background: rgba(255, 255, 255, 0.85);
+                padding: 3rem;
+                border-radius: 40px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            }
+            header {
+                text-align: center;
+                margin-bottom: 2.5rem;
+                padding-bottom: 2rem;
+                border-bottom: 3px solid #fcb69f;
+                border-radius: 0 0 50% 50% / 0 0 20px 20px;
+            }
+            h1 {
+                font-size: 2.5rem;
+                font-weight: 600;
+                color: #e07b39;
+                margin-bottom: 0.5rem;
+            }
+            .subtitle {
+                font-style: italic;
+                color: #8b6b4d;
+                font-size: 1.1rem;
+            }
+            main p {
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+            }
+            .bubble {
+                background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%);
+                padding: 1.5rem 2rem;
+                border-radius: 30px;
+                margin: 2rem 0;
+                box-shadow: 0 8px 25px rgba(252, 182, 159, 0.3);
+            }
+            .shapes {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                margin: 2.5rem 0;
+                flex-wrap: wrap;
+            }
+            .shape {
+                width: 80px;
+                height: 80px;
+                background: linear-gradient(135deg, #e07b39 0%, #fcb69f 100%);
+                box-shadow: 0 8px 20px rgba(224, 123, 57, 0.3);
+            }
+            .circle {border-radius: 50%;}
+            .pill {border-radius: 40px; width: 120px;}
+            .squircle {border-radius: 30%;}
+            .blob {border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;}
+            .soft-rect {border-radius: 20px;}
+            blockquote {
+                background: rgba(252, 182, 159, 0.3);
+                padding: 1.5rem 2rem;
+                border-radius: 0 30px 30px 30px;
+                margin: 2rem 0;
+                font-style: italic;
+                position: relative;
+            }
+            blockquote::before {
+                content: '"';
+                font-size: 4rem;
+                color: #e07b39;
+                position: absolute;
+                top: -10px;
+                left: 15px;
+                opacity: 0.3;
+            }
+            .rounded-list {
+                list-style: none;
+                margin: 1.5rem 0;
+            }
+            .rounded-list li {
+                background: rgba(255, 255, 255, 0.7);
+                padding: 0.8rem 1.5rem;
+                margin: 0.5rem 0;
+                border-radius: 20px;
+                border-left: 4px solid #e07b39;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+            hr {
+                border: none;
+                height: 4px;
+                background: linear-gradient(90deg, transparent, #fcb69f, transparent);
+                border-radius: 2px;
+                margin: 2rem 0;
+            }
+            aside {
+                margin-top: 2.5rem;
+                padding: 1.5rem;
+                background: rgba(252, 182, 159, 0.2);
+                border-radius: 25px;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #8b6b4d;
+            }
+            a {
+                color: #e07b39;
+                text-decoration: none;
+                border-bottom: 2px solid #fcb69f;
+                border-radius: 0 0 5px 5px;
+            }
+            a:hover {
+                background: rgba(252, 182, 159, 0.3);
+                border-radius: 5px;
+                padding: 0 4px;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {background: linear-gradient(135deg, #2d1f1a 0%, #4a2c20 100%); color: #f0e0d0;}
+                article {background: rgba(45, 31, 26, 0.9);}
+                header {border-bottom-color: #8b5a3c;}
+                h1 {color: #e8a060;}
+                .subtitle {color: #c0a080;}
+                .bubble {background: linear-gradient(135deg, #3d2a20 0%, #5a3c2c 100%); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);}
+                .shape {background: linear-gradient(135deg, #c07030 0%, #8b5a3c 100%); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);}
+                blockquote {background: rgba(139, 90, 60, 0.2);}
+                blockquote::before {color: #c07030;}
+                .rounded-list li {background: rgba(255, 255, 255, 0.05); border-left-color: #c07030;}
+                hr {background: linear-gradient(90deg, transparent, #8b5a3c, transparent);}
+                aside {background: rgba(139, 90, 60, 0.15); color: #c0a080;}
+                a {color: #e8a060; border-bottom-color: #8b5a3c;}
+                a:hover {background: rgba(139, 90, 60, 0.2);}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>Soft Edges</h1>
+                <p class="subtitle">a world without corners</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>Nature rarely creates right angles. Rivers curve. Hills roll. Cells are round. The sharp corner is a human invention, an artifact of measurement and manufacture.</p>
+
+                <section class="shapes">
+                    <div class="shape circle"></div>
+                    <div class="shape pill"></div>
+                    <div class="shape squircle"></div>
+                    <div class="shape blob"></div>
+                    <div class="shape soft-rect"></div>
+                </section>
+
+                <p>On this page, every element curves. No sharp corners exist. The <code style="background: rgba(252, 182, 159, 0.4); padding: 0.2em 0.5em; border-radius: 8px;">border-radius</code> property transforms everything.</p>
+
+                <div class="bubble">
+                    <p style="margin: 0;">The constraint softens not just the visuals, but the feeling. Sharp edges convey precision, authority, rigidity. Curves suggest welcome, comfort, approachability.</p>
+                </div>
+
+                <p>Consider how this changes your experience:</p>
+
+                <ul class="rounded-list">
+                    <li>Buttons want to be pressed, not clicked</li>
+                    <li>Containers feel like they're holding, not trapping</li>
+                    <li>The page breathes instead of boxing</li>
+                    <li>Reading becomes resting</li>
+                </ul>
+
+                <hr>
+
+                <blockquote>
+                    We shape our tools and thereafter our tools shape us. But what if we shaped them softer?
+                </blockquote>
+
+                <p>The rectangle is efficient. It tiles perfectly. It maximizes space. But the curve is human. It follows the path of least resistance. It mimics what we find in the world that existed before screens.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Nunito.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

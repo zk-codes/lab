@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head-->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Stylesheets & Files -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention" />
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>Weird Web October (Day 20 2025) | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/wwo/25day20">
+        <meta name="date" content="2025-10-20">
+        <meta name="last-modified" content="2025-10-20">
+        <!-- Stylesheet -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                background-color: #1a1a1a;
+                color: #1a1a1a;
+                font-family: 'Crimson Pro', Georgia, serif;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                transition: color 0.8s ease;
+            }
+            body:hover {
+                color: #e8e8e8;
+            }
+            article {
+                max-width: 650px;
+                padding: 3rem;
+                position: relative;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                opacity: 0;
+                transition: opacity 1.5s ease;
+            }
+            article:hover h1 {
+                opacity: 1;
+            }
+            main {
+                line-height: 2;
+                font-size: 1.15rem;
+            }
+            main p {
+                margin-bottom: 1.5rem;
+                opacity: 0;
+                transition: opacity 1.2s ease;
+            }
+            article:hover main p {
+                opacity: 0.9;
+            }
+            .secret {
+                position: relative;
+                cursor: help;
+            }
+            .secret::after {
+                content: attr(data-reveal);
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -2.5em;
+                background: #333;
+                color: #f0f0f0;
+                padding: 0.5em 1em;
+                border-radius: 4px;
+                font-size: 0.85em;
+                white-space: nowrap;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+            }
+            .secret:hover::after {
+                opacity: 1;
+            }
+            .invisible-ink {
+                color: transparent;
+                background: transparent;
+                transition: all 0.5s ease;
+                text-decoration: none;
+                border-bottom: 1px dashed transparent;
+            }
+            .invisible-ink:hover {
+                color: #c9a227;
+                border-bottom-color: #c9a227;
+            }
+            .layers {
+                position: relative;
+                display: inline-block;
+            }
+            .layers::before {
+                content: '████████';
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: #2a2a2a;
+                transition: opacity 0.6s ease;
+            }
+            .layers:hover::before {
+                opacity: 0;
+            }
+            aside {
+                margin-top: 2.5rem;
+                font-size: 0.85em;
+                text-align: right;
+                opacity: 0;
+                transition: opacity 1s ease 0.5s;
+            }
+            article:hover aside {
+                opacity: 0.7;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+                border-bottom: 1px solid currentColor;
+            }
+            a:hover {
+                border-bottom-style: solid;
+            }
+            .hint {
+                position: fixed;
+                bottom: 2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 0.8rem;
+                color: #444;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                animation: pulse 2s ease-in-out infinite;
+            }
+            @keyframes pulse {
+                0%, 100% {opacity: 0.3;}
+                50% {opacity: 0.8;}
+            }
+            article:hover ~ .hint,
+            body:hover .hint {
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+            @media (prefers-color-scheme: light) {
+                body {background-color: #f5f5f0; color: #f5f5f0;}
+                body:hover {color: #2a2a2a;}
+                .secret::after {background: #e8e8e8; color: #2a2a2a;}
+                .invisible-ink:hover {color: #8b6914;}
+                .layers::before {color: #e8e8e0;}
+                .hint {color: #ccc;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>What Lies Beneath</h1>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>The web is full of <span class="secret" data-reveal="like this one">hidden things</span>. Secrets tucked into margins, buried in source code, waiting for the curious.</p>
+
+                <p>Some things hide in plain sight. <span class="layers">The truth is here</span> if you know where to look. Others require <a href="#" class="invisible-ink">a gentler touch</a> to coax them into view.</p>
+
+                <p>We design visibility. We architect absence. Every choice to show is also a choice to conceal. The hidden drawer. The collapsed menu. The content behind the fold.</p>
+
+                <p>Move your cursor. Let light fall on what was dark. The page is never static; it's waiting for you to arrive.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a>. Typeset in Crimson Pro.</aside>
+
+            </main>
+
+        </article>
+
+        <p class="hint">hover to reveal</p>
+
+    </body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 29: No IDs | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day29">
+        <meta name="date" content="2025-11-29">
+        <meta name="last-modified" content="2025-11-29">
+        <meta name="description" content="Styling without ID selectors. Day 29 of No-Vember: classes and element selectors only.">
+        <!-- NO id attributes or # selectors allowed in CSS -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+                min-height: 100vh;
+                background-color: #f5f7fa;
+                color: #2d3748;
+                line-height: 1.8;
+                padding: 2.5rem 1.5rem;
+            }
+            .article-wrapper {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            .page-header {
+                text-align: center;
+                margin-bottom: 3rem;
+                padding-bottom: 2rem;
+                border-bottom: 3px solid #4a5568;
+            }
+            .page-title {
+                font-size: 2.8rem;
+                font-weight: 700;
+                color: #1a202c;
+                margin-bottom: 0.5rem;
+            }
+            .page-subtitle {
+                font-style: italic;
+                color: #718096;
+            }
+            .content-block {
+                margin-bottom: 1.5rem;
+                font-size: 1.05rem;
+            }
+            .section-heading {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #2d3748;
+                margin: 2.5rem 0 1rem 0;
+                padding-bottom: 0.5rem;
+                border-bottom: 2px solid #e2e8f0;
+            }
+            .info-cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+                margin: 2rem 0;
+            }
+            .info-card {
+                background: #fff;
+                padding: 1.5rem;
+                border-radius: 8px;
+                border: 1px solid #e2e8f0;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            }
+            .card-title {
+                font-weight: 700;
+                color: #2d3748;
+                margin-bottom: 0.5rem;
+            }
+            .card-text {
+                font-size: 0.95rem;
+                color: #718096;
+            }
+            .code-example {
+                background: #2d3748;
+                color: #e2e8f0;
+                padding: 1.5rem;
+                border-radius: 8px;
+                margin: 2rem 0;
+                font-family: 'Courier New', monospace;
+                font-size: 0.9rem;
+                overflow-x: auto;
+            }
+            .code-comment {
+                color: #68d391;
+            }
+            .code-selector {
+                color: #90cdf4;
+            }
+            .quote-block {
+                background: #edf2f7;
+                border-left: 4px solid #4a5568;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+                font-style: italic;
+                border-radius: 0 8px 8px 0;
+            }
+            .highlight-text {
+                background: #fefcbf;
+                padding: 0.1em 0.3em;
+                border-radius: 3px;
+            }
+            .emphasis {
+                color: #2b6cb0;
+                font-weight: 700;
+            }
+            .divider {
+                height: 1px;
+                background: #e2e8f0;
+                margin: 2.5rem 0;
+            }
+            .page-footer {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid #e2e8f0;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #a0aec0;
+            }
+            .link {
+                color: #2b6cb0;
+                text-decoration: none;
+                border-bottom: 1px solid #90cdf4;
+            }
+            .link:hover {
+                border-bottom-color: #2b6cb0;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {background-color: #1a202c; color: #e2e8f0;}
+                .page-header {border-bottom-color: #4a5568;}
+                .page-title {color: #f7fafc;}
+                .page-subtitle {color: #a0aec0;}
+                .section-heading {color: #f7fafc; border-bottom-color: #4a5568;}
+                .info-card {background: #2d3748; border-color: #4a5568;}
+                .card-title {color: #f7fafc;}
+                .card-text {color: #a0aec0;}
+                .code-example {background: #0d1117;}
+                .quote-block {background: #2d3748; border-left-color: #a0aec0;}
+                .highlight-text {background: #744210; color: #fefcbf;}
+                .emphasis {color: #90cdf4;}
+                .divider {background: #4a5568;}
+                .page-footer {border-top-color: #4a5568; color: #718096;}
+                .link {color: #90cdf4; border-bottom-color: #4a5568;}
+                .link:hover {border-bottom-color: #90cdf4;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article class="article-wrapper">
+
+            <!-- Header -->
+            <header class="page-header">
+                <h1 class="page-title">Classful</h1>
+                <p class="page-subtitle">styling without IDs</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p class="content-block">This page contains <span class="highlight-text">no ID selectors</span>. Not in the HTML, not in the CSS. Every style is applied through classes or element selectors.</p>
+
+                <h2 class="section-heading">Why Avoid IDs?</h2>
+
+                <section class="info-cards">
+                    <div class="info-card">
+                        <h3 class="card-title">Specificity</h3>
+                        <p class="card-text">IDs have high specificity, making them hard to override without !important.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 class="card-title">Reusability</h3>
+                        <p class="card-text">IDs must be unique. Classes can be reused across multiple elements.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3 class="card-title">Consistency</h3>
+                        <p class="card-text">Using only classes creates a more predictable, maintainable codebase.</p>
+                    </div>
+                </section>
+
+                <p class="content-block">Modern CSS methodologies like <span class="emphasis">BEM</span> and utility-first frameworks deliberately avoid ID selectors. The constraint is already mainstream in professional development.</p>
+
+                <section class="code-example">
+                    <span class="code-comment">/* Instead of */</span><br>
+                    <span class="code-selector">#header</span> { ... }<br>
+                    <span class="code-selector">#main-content</span> { ... }<br><br>
+                    <span class="code-comment">/* We use */</span><br>
+                    <span class="code-selector">.page-header</span> { ... }<br>
+                    <span class="code-selector">.content-block</span> { ... }
+                </section>
+
+                <div class="divider"></div>
+
+                <blockquote class="quote-block">
+                    IDs were designed for JavaScript hooks and anchor links, not for styling. Keeping them separate keeps your CSS cleaner and more modular.
+                </blockquote>
+
+                <p class="content-block">The constraint reveals nothing is lost. Every layout, every style, every effect on this page works without a single ID. Classes are enough.</p>
+
+                <!-- Credits -->
+                <footer class="page-footer">Made by <a href="https://zacharykai.net" class="link">Zachary Kai</a> for <a href="/nov/" class="link">No-Vember</a>. Typeset in Atkinson Hyperlegible.</footer>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>

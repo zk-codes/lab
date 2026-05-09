@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 27: No Absolute Positioning | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day27">
+        <meta name="date" content="2025-11-27">
+        <meta name="last-modified" content="2025-11-27">
+        <meta name="description" content="Layouts without position: absolute. Day 27 of No-Vember: relative, fixed, sticky, or static only.">
+        <!-- NO position: absolute allowed -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Work Sans', sans-serif;
+                min-height: 100vh;
+                background-color: #faf9f7;
+                color: #333;
+                line-height: 1.8;
+                font-weight: 300;
+            }
+            /* Sticky header without absolute */
+            header {
+                position: sticky;
+                top: 0;
+                background: #fff;
+                border-bottom: 1px solid #e0e0e0;
+                padding: 1rem 2rem;
+                z-index: 10;
+            }
+            .header-content {
+                max-width: 800px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            h1 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #6366f1;
+            }
+            .nav-hint {
+                font-size: 0.85rem;
+                color: #888;
+            }
+            article {
+                max-width: 700px;
+                margin: 0 auto;
+                padding: 3rem 2rem;
+            }
+            .hero {
+                text-align: center;
+                padding: 3rem 0;
+            }
+            .hero h2 {
+                font-size: 2.8rem;
+                font-weight: 600;
+                color: #1a1a1a;
+                margin-bottom: 1rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+                color: #666;
+            }
+            main p {
+                margin-bottom: 1.5rem;
+                font-size: 1.05rem;
+            }
+            h3 {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #6366f1;
+                margin: 2.5rem 0 1rem 0;
+            }
+            /* Card layout without absolute */
+            .method-cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+                margin: 2rem 0;
+            }
+            .method-card {
+                background: #fff;
+                border: 1px solid #e0e0e0;
+                border-radius: 12px;
+                padding: 1.5rem;
+                position: relative;
+            }
+            /* Badge using relative + transform instead of absolute */
+            .method-card::before {
+                content: attr(data-type);
+                display: inline-block;
+                background: #6366f1;
+                color: #fff;
+                font-size: 0.7rem;
+                font-weight: 600;
+                padding: 0.3rem 0.6rem;
+                border-radius: 4px;
+                text-transform: uppercase;
+                margin-bottom: 0.8rem;
+            }
+            .method-card h4 {
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+            .method-card p {
+                font-size: 0.9rem;
+                color: #666;
+                margin: 0;
+            }
+            /* Fixed sidebar note */
+            .fixed-note {
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+                background: #6366f1;
+                color: #fff;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                font-size: 0.85rem;
+                max-width: 200px;
+                box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+            }
+            blockquote {
+                background: #f0f0ff;
+                border-left: 4px solid #6366f1;
+                padding: 1.5rem 2rem;
+                margin: 2rem 0;
+                font-style: italic;
+                border-radius: 0 8px 8px 0;
+            }
+            /* Overlap effect using negative margins instead of absolute */
+            .overlap-demo {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 2rem 0;
+            }
+            .overlap-box {
+                width: 100px;
+                height: 100px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                color: #fff;
+            }
+            .overlap-box:nth-child(1) {
+                background: #818cf8;
+            }
+            .overlap-box:nth-child(2) {
+                background: #6366f1;
+                margin-left: -30px;
+                margin-top: 20px;
+            }
+            .overlap-box:nth-child(3) {
+                background: #4f46e5;
+                margin-left: -30px;
+                margin-top: 40px;
+            }
+            hr {
+                border: none;
+                height: 1px;
+                background: #e0e0e0;
+                margin: 2.5rem 0;
+            }
+            aside {
+                padding-top: 1.5rem;
+                border-top: 1px solid #e0e0e0;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #888;
+            }
+            a {
+                color: #6366f1;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            @media (max-width: 600px) {
+                .fixed-note {display: none;}
+            }
+            @media (prefers-color-scheme: dark) {
+                body {background-color: #0f0f10; color: #e0e0e0;}
+                header {background: #1a1a1c; border-bottom-color: #333;}
+                h1 {color: #818cf8;}
+                .nav-hint {color: #666;}
+                .hero h2 {color: #e0e0e0;}
+                .hero p {color: #888;}
+                h3 {color: #818cf8;}
+                .method-card {background: #1a1a1c; border-color: #333;}
+                .method-card::before {background: #818cf8;}
+                .method-card p {color: #999;}
+                .fixed-note {background: #818cf8;}
+                blockquote {background: #1a1a2a; border-left-color: #818cf8;}
+                hr {background: #333;}
+                aside {border-top-color: #333;}
+                a {color: #818cf8;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Sticky Header -->
+        <header>
+            <div class="header-content">
+                <h1>Day 27</h1>
+                <span class="nav-hint">no absolute positioning</span>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Hero -->
+            <section class="hero">
+                <h2>Positioned Otherwise</h2>
+                <p>layouts without position: absolute</p>
+            </section>
+
+            <!-- Main -->
+            <main>
+
+                <p>The <code style="background: #f0f0f0; padding: 0.15em 0.4em; border-radius: 4px;">position: absolute</code> property removes elements from document flow and places them precisely. It's powerful, but it creates fragility. Today we build without it.</p>
+
+                <h3>The Remaining Options</h3>
+
+                <section class="method-cards">
+                    <div class="method-card" data-type="Static">
+                        <h4>Static</h4>
+                        <p>The default. Elements flow normally, one after another.</p>
+                    </div>
+                    <div class="method-card" data-type="Relative">
+                        <h4>Relative</h4>
+                        <p>Offsets from normal position. Space is preserved in the flow.</p>
+                    </div>
+                    <div class="method-card" data-type="Sticky">
+                        <h4>Sticky</h4>
+                        <p>Hybrid of relative and fixed. This header demonstrates it.</p>
+                    </div>
+                    <div class="method-card" data-type="Fixed">
+                        <h4>Fixed</h4>
+                        <p>Positioned relative to viewport. See the note in the corner.</p>
+                    </div>
+                </section>
+
+                <h3>Creating Overlap</h3>
+
+                <p>Absolute positioning is often used for overlapping elements. But negative margins can achieve similar effects while keeping elements in flow:</p>
+
+                <section class="overlap-demo">
+                    <div class="overlap-box">1</div>
+                    <div class="overlap-box">2</div>
+                    <div class="overlap-box">3</div>
+                </section>
+
+                <hr>
+
+                <blockquote>
+                    Absolute positioning solves problems quickly. But it creates new ones: elements that don't respond to their siblings, layouts that break on resize. The alternatives are more resilient.
+                </blockquote>
+
+                <p>Grid and flexbox reduce the need for absolute positioning. Sticky headers replace absolutely-positioned fixed elements. Transform and margin create offsets. The modern layout toolkit makes absolute positioning optional.</p>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Work Sans.</aside>
+
+            </main>
+
+        </article>
+
+        <!-- Fixed Note -->
+        <div class="fixed-note">
+            This note uses <strong>position: fixed</strong>, not absolute.
+        </div>
+
+    </body>
+</html>

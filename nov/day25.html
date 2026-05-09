@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <!-- Head -->
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- File Links -->
+        <link rel="webmention" href="https://webmention.io/zacharykai.net/webmention">
+        <!-- Google Font Placeholder -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+        <!-- Page Details -->
+        <title>No-Vember Day 25: No Margin | Lunaseeker Lab</title>
+        <link rel="canonical" href="https://lab.lunaseeker.com/nov/day25">
+        <meta name="date" content="2025-11-25">
+        <meta name="last-modified" content="2025-11-25">
+        <meta name="description" content="Spacing without margin. Day 25 of No-Vember: padding, borders, and positioning only.">
+        <!-- NO margin property allowed anywhere -->
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box;}
+            body {
+                font-family: 'Josefin Sans', sans-serif;
+                min-height: 100vh;
+                background-color: #0f172a;
+                color: #e2e8f0;
+                line-height: 1.8;
+                font-weight: 300;
+            }
+            article {
+                max-width: 700px;
+                padding: 3rem 2rem;
+                /* Using padding on parent instead of margin on children */
+            }
+            header {
+                text-align: center;
+                padding-bottom: 2rem;
+                border-bottom: 2px solid #334155;
+            }
+            h1 {
+                font-size: 2.8rem;
+                font-weight: 600;
+                color: #22d3ee;
+                padding-bottom: 0.5rem;
+            }
+            .subtitle {
+                font-style: italic;
+                color: #64748b;
+            }
+            /* Using padding on container and gap for spacing */
+            main {
+                padding-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            main p {
+                font-size: 1.05rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: #22d3ee;
+                padding-top: 1rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid #334155;
+            }
+            /* Grid with gap for spacing */
+            .card-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 1rem;
+            }
+            .card {
+                background: #1e293b;
+                padding: 1.5rem;
+                border-radius: 12px;
+                border: 1px solid #334155;
+            }
+            .card h3 {
+                color: #22d3ee;
+                font-weight: 600;
+                padding-bottom: 0.5rem;
+            }
+            .card p {
+                font-size: 0.9rem;
+                color: #94a3b8;
+            }
+            blockquote {
+                background: #1e293b;
+                border-left: 4px solid #22d3ee;
+                padding: 1.5rem 2rem;
+                font-style: italic;
+                border-radius: 0 8px 8px 0;
+            }
+            /* Flex gap for inline elements */
+            .tag-group {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .tag {
+                background: #334155;
+                padding: 0.4rem 1rem;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                color: #22d3ee;
+            }
+            /* Border as spacer */
+            .spacer {
+                border-top: 1px solid #334155;
+                padding-top: 1.5rem;
+            }
+            .spacer p {
+                padding-bottom: 0;
+            }
+            /* Padding creates visual separation */
+            .highlight-box {
+                background: linear-gradient(135deg, #0e7490 0%, #0891b2 100%);
+                padding: 2rem;
+                border-radius: 12px;
+                color: #f0fdfa;
+            }
+            .highlight-box p {
+                padding: 0;
+            }
+            code {
+                background: #334155;
+                padding: 0.15rem 0.4rem;
+                border-radius: 4px;
+                font-family: monospace;
+                font-size: 0.85em;
+            }
+            aside {
+                padding-top: 2rem;
+                border-top: 1px solid #334155;
+                font-size: 0.9rem;
+                text-align: center;
+                color: #64748b;
+            }
+            a {
+                color: #22d3ee;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            @media (prefers-color-scheme: light) {
+                body {background-color: #f8fafc; color: #1e293b;}
+                header {border-bottom-color: #e2e8f0;}
+                h1 {color: #0891b2;}
+                .subtitle {color: #64748b;}
+                h2 {color: #0891b2; border-bottom-color: #e2e8f0;}
+                .card {background: #f1f5f9; border-color: #e2e8f0;}
+                .card h3 {color: #0891b2;}
+                .card p {color: #475569;}
+                blockquote {background: #f1f5f9; border-left-color: #0891b2;}
+                .tag {background: #e2e8f0; color: #0891b2;}
+                .spacer {border-top-color: #e2e8f0;}
+                .highlight-box {background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);}
+                code {background: #e2e8f0;}
+                aside {border-top-color: #e2e8f0;}
+                a {color: #0891b2;}
+            }
+        </style>
+    </head>
+
+    <!-- Body -->
+    <body>
+
+        <!-- Content -->
+        <article>
+
+            <!-- Header -->
+            <header>
+                <h1>No Margins</h1>
+                <p class="subtitle">the other spacing tools</p>
+            </header>
+
+            <!-- Main -->
+            <main>
+
+                <p>Margin and padding are often confused. Both create space. But margin pushes elements apart; padding expands them inward. Today, we only have padding.</p>
+
+                <h2>The Alternatives</h2>
+
+                <section class="card-grid">
+                    <div class="card">
+                        <h3>Padding</h3>
+                        <p>Internal space that expands the element.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Gap</h3>
+                        <p>Flex and Grid gap handles child spacing.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Borders</h3>
+                        <p>Transparent borders can act as spacers.</p>
+                    </div>
+                </section>
+
+                <p>This page uses <code>gap</code> on the main element to space paragraphs. No margin on any child. The parent handles all vertical rhythm.</p>
+
+                <section class="tag-group">
+                    <span class="tag">padding</span>
+                    <span class="tag">gap</span>
+                    <span class="tag">border</span>
+                    <span class="tag">position</span>
+                    <span class="tag">flexbox</span>
+                    <span class="tag">grid</span>
+                </section>
+
+                <blockquote>
+                    Margin collapses. Margin creates space outside. Margin is invisible but affects siblings. Padding is simpler: it only affects the element itself.
+                </blockquote>
+
+                <section class="highlight-box">
+                    <p>This box has no margin. Its separation from surrounding elements comes from the parent's gap property. Its internal breathing room comes from padding.</p>
+                </section>
+
+                <section class="spacer">
+                    <p>The constraint reveals how much we rely on margin by default. But modern layout tools - flexbox gap, grid gap - handle spacing between elements cleanly. Margin becomes optional.</p>
+                </section>
+
+                <!-- Credits -->
+                <aside>Made by <a href="https://zacharykai.net">Zachary Kai</a> for <a href="/nov/">No-Vember</a>. Typeset in Josefin Sans.</aside>
+
+            </main>
+
+        </article>
+
+    </body>
+</html>
